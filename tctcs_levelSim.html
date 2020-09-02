@@ -1,0 +1,271 @@
+<!DOCtype html><html><head>
+<title>Gamer</title>
+<script language="Javascript" type="text/javascript">
+var st_hp = 0; var st_mp = 0; var st_atk = 0; var st_def = 0; var st_mag = 0; var st_res = 0; var st_spd = 0;
+var job_knight = [86,35,75,71,41,56,56]; 
+var rawGain_knight = [5,2,3,3,1,1,2]; var bonusAmt_knight = 2;
+var bCh_knight = [15,30,50,80,90,90,100];
+var job_mage = [60,80,41,56,75,71,56]; 
+var rawGain_mage = [2,5,1,1,3,3,2]; var bonusAmt_mage = 2;
+var bCh_mage = [5,15,20,45,45,75,100];
+var job_archer = [69,43,59,61,42,64,74]; 
+var rawGain_archer = [4,3,3,1,1,2,3]; var bonusAmt_archer = 2;
+var bCh_archer = [15,30,40,65,65,85,100];
+var job_saboteur = [69,43,59,61,42,64,74]; 
+var rawGain_saboteur = [3,3,2,2,1,2,3]; var bonusAmt_saboteur = 2;
+var bCh_saboteur = [10,20,30,45,60,85,100];
+
+var job_ = []; 
+var rawGain_ = []; var bonusAmt_ = 3;
+var bCh_ = [];
+
+//------------------------------------------------------------------------------------------
+var mageCheck = false; var hpBonGain = 3; var mpBonGain = 2; var levelCount = 1; var job = undefined; 
+
+function setKnight(){
+	job = "jobKnight";
+    mageCheck = false; levelCount = 1;
+    writeStat();
+}
+function setMage(){
+	job = "jobMage";
+    mageCheck = true; levelCount = 1;
+    writeStat();
+}
+function setArcher(){
+	job = "jobArcher";    mageCheck = false; levelCount = 1;    writeStat();
+}
+function setSaboteur(){
+	job = "jobSaboteur";    mageCheck = false; levelCount = 1;    writeStat();
+}
+//------------------------------------------------------------------------------------------
+function levelUp(){
+    levelCount++;
+    if (mageCheck == true){
+        hpBonGain = 2; mpBonGain = 3; //console.log("mage true");
+    }
+    var bonusRoll = Math.floor(Math.random()*100);
+    if (job == "jobMage"){
+        console.log(">> mage Lv" + levelCount);
+        st_hp += rawGain_mage[0];
+        st_mp += rawGain_mage[1];
+        st_atk += rawGain_mage[2];
+        st_def += rawGain_mage[3];
+        st_mag += rawGain_mage[4];
+        st_res += rawGain_mage[5];
+        st_spd += rawGain_mage[6];
+        bonusAmt = bonusAmt_mage;
+        for (var a=0; a < bonusAmt; a++){
+            console.log("roll: " + bonusRoll);
+            if (bonusRoll < bCh_mage[0]){
+                st_hp += hpBonGain; console.log("+hp");
+            }
+            else if (bonusRoll < bCh_mage[1]){
+                st_mp += mpBonGain; console.log("+mp");
+            }
+            else if (bonusRoll < bCh_mage[2]){
+                st_atk++; console.log("+atk");
+            }
+            else if (bonusRoll < bCh_mage[3]){
+                st_def++; console.log("+def");
+            }
+            else if (bonusRoll < bCh_mage[4]){
+                st_mag++; console.log("+mag");
+            }
+            else if (bonusRoll < bCh_mage[5]){
+                st_res++; console.log("+res");
+            }
+            else if (bonusRoll <= bCh_mage[6]){
+                st_spd++; console.log("+spd");
+            }
+            bonusRoll = Math.floor(Math.floor(Math.random()*100) + 0); //reset
+        }
+    }
+    else if (job == "jobKnight"){
+        console.log(">> knight Lv " + levelCount);
+        st_hp += rawGain_knight[0];
+        st_mp += rawGain_knight[1];
+        st_atk += rawGain_knight[2];
+        st_def += rawGain_knight[3];
+        st_mag += rawGain_knight[4];
+        st_res += rawGain_knight[5];
+        st_spd += rawGain_knight[6];
+        bonusAmt = bonusAmt_knight;
+        for (var a=0; a < bonusAmt; a++){
+            if (bonusRoll < bCh_knight[0]){
+                st_hp += hpBonGain; console.log("+hp");
+            }
+            else if (bonusRoll < bCh_knight[1]){
+                st_mp += mpBonGain; console.log("+mp");
+            }
+            else if (bonusRoll < bCh_knight[2]){
+                st_atk++; console.log("+atk");
+            }
+            else if (bonusRoll < bCh_knight[3]){
+                st_def++; console.log("+def");
+            }
+            else if (bonusRoll < bCh_knight[4]){
+                st_mag++; console.log("+mag");
+            }
+            else if (bonusRoll < bCh_knight[5]){
+                st_res++; console.log("+res");
+            }
+            else if (bonusRoll <= bCh_knight[6]){
+                st_spd++; console.log("+spd");
+            }
+            bonusRoll = Math.floor(Math.floor(Math.random()*100) + 0); //reset
+        }
+    }
+    else if (job == "jobArcher"){
+        console.log(">> archer Lv " + levelCount);
+        st_hp += rawGain_archer[0];        st_mp += rawGain_archer[1];        st_atk += rawGain_archer[2];        st_def += rawGain_archer[3];
+        st_mag += rawGain_archer[4];        st_res += rawGain_archer[5];        st_spd += rawGain_archer[6];
+        bonusAmt = bonusAmt_archer;
+        for (var a=0; a < bonusAmt; a++){
+            if (bonusRoll < bCh_archer[0]){                st_hp += hpBonGain; console.log("+hp");            }
+            else if (bonusRoll < bCh_archer[1]){                st_mp += mpBonGain; console.log("+mp");            }
+            else if (bonusRoll < bCh_archer[2]){                st_atk++; console.log("+atk");            }
+            else if (bonusRoll < bCh_archer[3]){                st_def++; console.log("+def");            }
+            else if (bonusRoll < bCh_archer[4]){                st_mag++; console.log("+mag");            }
+            else if (bonusRoll < bCh_archer[5]){                st_res++; console.log("+res");            }
+            else if (bonusRoll <= bCh_archer[6]){                st_spd++; console.log("+spd");            }
+            bonusRoll = Math.floor(Math.floor(Math.random()*100) + 0); //reset
+        }
+    }
+    else if (job == "jobSaboteur"){
+        console.log(">> saboteur Lv " + levelCount);
+        st_hp += rawGain_saboteur[0];        st_mp += rawGain_saboteur[1];        st_atk += rawGain_saboteur[2];        st_def += rawGain_saboteur[3];
+        st_mag += rawGain_saboteur[4];        st_res += rawGain_saboteur[5];        st_spd += rawGain_saboteur[6];
+        bonusAmt = bonusAmt_saboteur;
+        for (var a=0; a < bonusAmt; a++){
+            if (bonusRoll < bCh_saboteur[0]){                st_hp += hpBonGain; console.log("+hp");            }
+            else if (bonusRoll < bCh_saboteur[1]){                st_mp += mpBonGain; console.log("+mp");            }
+            else if (bonusRoll < bCh_saboteur[2]){                st_atk++; console.log("+atk");            }
+            else if (bonusRoll < bCh_saboteur[3]){                st_def++; console.log("+def");            }
+            else if (bonusRoll < bCh_saboteur[4]){                st_mag++; console.log("+mag");            }
+            else if (bonusRoll < bCh_saboteur[5]){                st_res++; console.log("+res");            }
+            else if (bonusRoll <= bCh_saboteur[6]){                st_spd++; console.log("+spd");            }
+            bonusRoll = Math.floor(Math.floor(Math.random()*100) + 0); //reset
+        }
+    }
+    refreshHTML();
+}
+//=====================================================================================================
+
+function writeStat(){
+    if (job == "jobKnight"){        console.log("Job: Knight");    }
+    else if (job == "jobMage"){        console.log("Job: Mage");    }
+    else if (job == "jobArcher"){        console.log("Job: Archer");    }
+    else if (job == "jobSaboteur"){        console.log("Job: Saboteur");    }
+    writeHTML();
+}
+//var sttt = document.getElementById('statWindow');
+var jobSelect = "x";
+    function writeHTML(){
+        var jobDisplay = document.getElementById('jobName'); var lvDisplay1 = document.getElementById('lvDisplay');
+        var ww_hp = document.getElementById('tb_hp'); var ww_mp = document.getElementById('tb_mp');
+        var ww_atk = document.getElementById('tb_atk'); var ww_def = document.getElementById('tb_def');
+        var ww_mag = document.getElementById('tb_mag'); var ww_res = document.getElementById('tb_res');
+        var ww_spd = document.getElementById('tb_spd');
+        if (job == "jobMage"){
+            st_hp = job_mage[0]; st_mp = job_mage[1];
+            st_atk = job_mage[2]; st_def = job_mage[3];
+            st_mag = job_mage[4]; st_res = job_mage[5];
+            st_spd = job_mage[6];
+            jobSelect = "Mage";            jobDisplay.innerHTML = jobSelect;
+            lvDisplay.innerHTML = "Lv. " + levelCount;
+            tb_hp.innerHTML = st_hp; tb_mp.innerHTML = st_mp;
+            tb_atk.innerHTML = st_atk; tb_def.innerHTML = st_def;
+            tb_mag.innerHTML = st_mag; tb_res.innerHTML = st_res;
+            tb_spd.innerHTML = st_spd;
+        }
+        else if (job == "jobKnight"){
+            st_hp = job_knight[0]; st_mp = job_knight[1];
+            st_atk = job_knight[2]; st_def = job_knight[3];
+            st_mag = job_knight[4]; st_res = job_knight[5];
+            st_spd = job_knight[6];
+            jobSelect = "Knight";           jobDisplay.innerHTML = jobSelect;
+            lvDisplay.innerHTML = "Lv. " + levelCount;
+            tb_hp.innerHTML = st_hp; tb_mp.innerHTML = st_mp;
+            tb_atk.innerHTML = st_atk; tb_def.innerHTML = st_def;
+            tb_mag.innerHTML = st_mag; tb_res.innerHTML = st_res;
+            tb_spd.innerHTML = st_spd;
+        }
+        else if (job == "jobArcher"){
+            st_hp = job_archer[0]; st_mp = job_archer[1];
+            st_atk = job_archer[2]; st_def = job_archer[3];
+            st_mag = job_archer[4]; st_res = job_archer[5];
+            st_spd = job_archer[6];
+            jobSelect = "Archer";            jobDisplay.innerHTML = jobSelect;
+            lvDisplay.innerHTML = "Lv. " + levelCount;
+            tb_hp.innerHTML = st_hp; tb_mp.innerHTML = st_mp;
+            tb_atk.innerHTML = st_atk; tb_def.innerHTML = st_def;
+            tb_mag.innerHTML = st_mag; tb_res.innerHTML = st_res;
+            tb_spd.innerHTML = st_spd;
+        }
+        else if (job == "jobSaboteur"){
+            st_hp = job_saboteur[0]; st_mp = job_saboteur[1];
+            st_atk = job_saboteur[2]; st_def = job_saboteur[3];
+            st_mag = job_saboteur[4]; st_res = job_saboteur[5];
+            st_spd = job_saboteur[6];
+            jobSelect = "Saboteur";            jobDisplay.innerHTML = jobSelect;
+            lvDisplay.innerHTML = "Lv. " + levelCount;
+            tb_hp.innerHTML = st_hp; tb_mp.innerHTML = st_mp;
+            tb_atk.innerHTML = st_atk; tb_def.innerHTML = st_def;
+            tb_mag.innerHTML = st_mag; tb_res.innerHTML = st_res;
+            tb_spd.innerHTML = st_spd;
+        }
+    }
+//------------------------------------------------------------------------------------------
+function refreshHTML(){
+    tb_hp.innerHTML = st_hp; tb_mp.innerHTML = st_mp;
+    tb_atk.innerHTML = st_atk; tb_def.innerHTML = st_def;
+    tb_mag.innerHTML = st_mag; tb_res.innerHTML = st_res;
+    tb_spd.innerHTML = st_spd;
+    lvDisplay.innerHTML = "Lv. " + levelCount;
+}
+</script>
+</head>
+<body>
+<style>
+    table,
+    td {
+        border: 2px solid #333;
+    }
+    thead,
+    tfoot {
+        background-color: #333;
+        color: #fff;
+    }
+</style>
+<br><input type="submit" value="Knight" onclick="setKnight()" />
+<input type="submit" value="Mage" onclick="setMage()" />
+<input type="submit" value="Archer" onclick="setArcher()" />
+<input type="submit" value="Saboteur" onclick="setSaboteur()" />
+
+<br><br><input type="submit" value="Level Up" onclick="levelUp()" /><hr>
+
+<div id="statWindow">[]</div>
+<br><table>
+        <thead>
+            <tr><th colspan='2'><div id="jobName">Job</div><div id="lvDisplay"></div></th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>HP</b></td>                <td><b>MP</b></td>
+                <td><b>Atk</b></td>                <td><b>Def</b></td>
+                <td><b>Mag</b></td>                <td><b>Res</b></td>
+                <td><b>Spd</b></td>
+            </tr>
+            <tr>
+                <td><div id="tb_hp">X</div></td>
+                <td><div id="tb_mp">X</div></td>
+                <td><div id="tb_atk">X</div></td>
+                <td><div id="tb_def">X</div></td>
+                <td><div id="tb_mag">X</div></td>
+                <td><div id="tb_res">X</div></td>
+                <td><div id="tb_spd">X</div></td>
+            </tr>
+        </tbody>
+    </table>
+</body></html>
