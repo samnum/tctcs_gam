@@ -1,26 +1,71 @@
-<!DOCtype html><html><head>
-<title>Gamer</title>
+<!DOCtype html><html><head><title>Gamer</title>
 <script language="Javascript" type="text/javascript">
 var st_hp = 0; var st_mp = 0; var st_atk = 0; var st_def = 0; var st_mag = 0; var st_res = 0; var st_spd = 0;
-var job_knight = [86,35,75,71,41,56,56]; 
-var rawGain_knight = [5,2,3,3,1,1,2]; var bonusAmt_knight = 2;
-var bCh_knight = [15,30,50,80,90,90,100];
-var job_mage = [60,80,41,56,75,71,56]; 
-var rawGain_mage = [2,5,1,1,3,3,2]; var bonusAmt_mage = 2;
-var bCh_mage = [5,15,20,45,45,75,100];
-var job_archer = [69,43,59,61,42,64,74]; 
-var rawGain_archer = [4,3,3,1,1,2,3]; var bonusAmt_archer = 2;
-var bCh_archer = [15,30,40,65,65,85,100];
-var job_saboteur = [69,43,59,61,42,64,74]; 
-var rawGain_saboteur = [3,3,2,2,1,2,3]; var bonusAmt_saboteur = 2;
+var job_knight = [86,35,75,71,41,56,56]; var bonusAmt_knight = 3;
+var rawGain_knight = [5,2,3,2,1,1,2]; 
+var bCh_knight = [10,25,45,70,80,90,100];
+var job_mage = [61,80,41,56,75,71,56]; var bonusAmt_mage = 3;
+var rawGain_mage = [3,4,1,1,3,2,2]; 
+var bCh_mage = [15,20,25,50,55,80,100];
+var job_archer = [69,43,57,61,42,64,74]; var bonusAmt_archer = 3;
+var rawGain_archer = [4,3,2,1,1,2,3]; 
+var bCh_archer = [10,20,30,60,65,85,100];
+var job_gladiator = [88,40,98,64,25,48,55]; var bonusAmt_gladiator = 4;
+var rawGain_gladiator = [5,2,4,2,0,1,2]; 
+var bCh_gladiator = [5,15,55,70,75,80,100];
+var job_martialArtist = [78,43,83,63,46,57,68]; var bonusAmt_martialArtist = 3;
+var rawGain_martialArtist = [7,1,3,0,2,1,3]; 
+var bCh_martialArtist = [25,30,45,70,75,85,100];
+var job_paladin = [118,31,70,103,42,50,49]; var bonusAmt_paladin = 5;
+var rawGain_paladin = [3,1,1,3,1,1,2]; 
+var bCh_paladin = [10,15,25,60,70,90,100];
+var job_saboteur = [69,47,62,58,55,63,67]; var bonusAmt_saboteur = 2;
+var rawGain_saboteur = [3,3,2,2,1,2,3]; 
 var bCh_saboteur = [10,20,30,45,60,85,100];
-
-var job_ = []; 
-var rawGain_ = []; var bonusAmt_ = 3;
+var job_samurai = [81,66,70,54,70,54,60]; var bonusAmt_samurai = 2;
+var rawGain_samurai = [4,3,3,1,3,1,2]; 
+var bCh_samurai = [10,25,40,60,75,85,100];
+var job_sentinel = [110,44,46,87,52,88,72]; var bonusAmt_sentinel = 3;
+var rawGain_sentinel = [4,2,1,3,2,2,2]; 
+var bCh_sentinel = [20,30,35,55,60,80,100];
+var job_spiritLancer = [83,70,78,73,57,58,69]; var bonusAmt_spiritLancer = 3;
+var rawGain_spiritLancer = [5,2,4,0,1,1,3]; 
+var bCh_spiritLancer = [15,30,35,55,60,75,100];
+var job_temporalKnight = [76,52,90,50,48,58,67]; var bonusAmt_temporalKnight = 3;
+var rawGain_temporalKnight = [4,3,4,1,1,1,3]; 
+var bCh_temporalKnight = [10,15,40,65,70,80,100];
+var job_ninja = [71,58,52,50,51,78,75]; var bonusAmt_ninja = 3;
+var rawGain_ninja = [4,3,1,1,1,2,4]; 
+var bCh_ninja = [10,20,40,45,50,60,100];
+var job_summoner = [99,108,49,55,73,85,55]; var bonusAmt_summoner = 2;
+var rawGain_summoner = [1,7,1,2,2,3,2]; 
+var bCh_summoner = [20,45,50,60,75,80,100];
+var job_sorceror = [55,110,45,70,91,74,50]; var bonusAmt_sorceror = 3;
+var rawGain_sorceror = [2,3,1,1,4,2,2]; 
+var bCh_sorceror = [30,35,40,50,90,95,100];
+var job_oracle = [80,91,40,62,70,82,58]; var bonusAmt_oracle = 2;
+var rawGain_oracle = [3,4,0,0,2,7,2]; 
+var bCh_oracle = [15,30,35,60,70,80,100];
+var job_priest = [67,88,24,52,81,91,58]; var bonusAmt_priest = 2;
+var rawGain_priest = [2,5,0,1,3,2,4]; 
+var bCh_priest = [15,30,45,55,80,95,100];
+var job_archMage = [68,88,45,55,80,65,58]; var bonusAmt_archMage = 3;
+var rawGain_archMage = [3,4,1,2,4,0,2]; 
+var bCh_archMage = [20,30,35,50,70,95,100];
+var job_chaosMage = []; var bonusAmt_ = 2;
+var rawGain_ = []; 
 var bCh_ = [];
 
+89		27		55		77		70		58		59	
+	5		2		1		1		4		2		2
+	15%		5%		5%		15%		15%		20%		25%
+var job_ = []; var bonusAmt_ = 3;
+var rawGain_ = []; 
+var bCh_ = [];
+
+
 //------------------------------------------------------------------------------------------
-var mageCheck = false; var hpBonGain = 3; var mpBonGain = 2; var levelCount = 1; var job = undefined; 
+var mageCheck = false; var hpBonGain = 3; var mpBonGain = 2; var levelCount = 1; var job; 
 
 function setKnight(){
 	job = "jobKnight";
@@ -28,15 +73,52 @@ function setKnight(){
     writeStat();
 }
 function setMage(){
-	job = "jobMage";
-    mageCheck = true; levelCount = 1;
-    writeStat();
+	job = "jobMage";    mageCheck = true; levelCount = 1;    writeStat();
 }
 function setArcher(){
 	job = "jobArcher";    mageCheck = false; levelCount = 1;    writeStat();
 }
 function setSaboteur(){
 	job = "jobSaboteur";    mageCheck = false; levelCount = 1;    writeStat();
+}
+function setPaladin(){
+	job = "jobPaladin";    mageCheck = false; levelCount = 1;    writeStat();
+}
+function setSentinel(){
+	job = "jobSentinel";    mageCheck = false; levelCount = 1;    writeStat();
+}
+function setMartialArtist(){
+	job = "jobMartialArtist";    mageCheck = false; levelCount = 1;    writeStat();
+}
+function setNinja(){
+	job = "jobNinja";    mageCheck = false; levelCount = 1;    writeStat();
+}
+function setSamurai(){
+	job = "jobSamurai";    mageCheck = false; levelCount = 1;    writeStat();
+}
+function setSpiritLancer(){
+	job = "jobSpiritLancer";    mageCheck = false; levelCount = 1;    writeStat();
+}
+function setTemporalKnight(){
+	job = "jobTemporalKnight";    mageCheck = false; levelCount = 1;    writeStat();
+}
+function setGladiator(){
+	job = "jobGladiator";    mageCheck = false; levelCount = 1;    writeStat();
+}
+function setArchMage(){
+	job = "jobArchMage";    mageCheck = true; levelCount = 1;    writeStat();
+}
+function setOracle(){
+	job = "jobOracle";    mageCheck = true; levelCount = 1;    writeStat();
+}
+function setPriest(){
+	job = "jobPriest";    mageCheck = true; levelCount = 1;    writeStat();
+}
+function setSummoner(){
+	job = "jobSummoner";    mageCheck = true; levelCount = 1;    writeStat();
+}
+function setSorceror(){
+	job = "jobSorceror";    mageCheck = true; levelCount = 1;    writeStat();
 }
 //------------------------------------------------------------------------------------------
 function levelUp(){
@@ -148,6 +230,214 @@ function levelUp(){
             bonusRoll = Math.floor(Math.floor(Math.random()*100) + 0); //reset
         }
     }
+    else if (job == "jobPaladin"){
+        console.log(">> paladin Lv " + levelCount);
+        st_hp += rawGain_paladin[0];        st_mp += rawGain_paladin[1];        st_atk += rawGain_paladin[2];        st_def += rawGain_paladin[3];
+        st_mag += rawGain_paladin[4];        st_res += rawGain_paladin[5];        st_spd += rawGain_paladin[6];
+        bonusAmt = bonusAmt_paladin;
+        for (var a=0; a < bonusAmt; a++){
+            if (bonusRoll < bCh_paladin[0]){                st_hp += hpBonGain; console.log("+hp");            }
+            else if (bonusRoll < bCh_paladin[1]){                st_mp += mpBonGain; console.log("+mp");            }
+            else if (bonusRoll < bCh_paladin[2]){                st_atk++; console.log("+atk");            }
+            else if (bonusRoll < bCh_paladin[3]){                st_def++; console.log("+def");            }
+            else if (bonusRoll < bCh_paladin[4]){                st_mag++; console.log("+mag");            }
+            else if (bonusRoll < bCh_paladin[5]){                st_res++; console.log("+res");            }
+            else if (bonusRoll <= bCh_paladin[6]){                st_spd++; console.log("+spd");            }
+            bonusRoll = Math.floor(Math.floor(Math.random()*100) + 0); //reset
+        }
+    }
+    else if (job == "jobSentinel"){
+        console.log(">> sentinel Lv " + levelCount);
+        st_hp += rawGain_sentinel[0];        st_mp += rawGain_sentinel[1];        st_atk += rawGain_sentinel[2];        st_def += rawGain_sentinel[3];
+        st_mag += rawGain_sentinel[4];        st_res += rawGain_sentinel[5];        st_spd += rawGain_sentinel[6];
+        bonusAmt = bonusAmt_sentinel;
+        for (var a=0; a < bonusAmt; a++){
+            if (bonusRoll < bCh_sentinel[0]){                st_hp += hpBonGain; console.log("+hp");            }
+            else if (bonusRoll < bCh_sentinel[1]){                st_mp += mpBonGain; console.log("+mp");            }
+            else if (bonusRoll < bCh_sentinel[2]){                st_atk++; console.log("+atk");            }
+            else if (bonusRoll < bCh_sentinel[3]){                st_def++; console.log("+def");            }
+            else if (bonusRoll < bCh_sentinel[4]){                st_mag++; console.log("+mag");            }
+            else if (bonusRoll < bCh_sentinel[5]){                st_res++; console.log("+res");            }
+            else if (bonusRoll <= bCh_sentinel[6]){                st_spd++; console.log("+spd");            }
+            bonusRoll = Math.floor(Math.floor(Math.random()*100) + 0); //reset
+        }
+    }
+    else if (job == "jobMartialArtist"){
+        console.log(">> martialArtist Lv " + levelCount);
+        st_hp += rawGain_martialArtist[0];        st_mp += rawGain_martialArtist[1];        st_atk += rawGain_martialArtist[2];        st_def += rawGain_martialArtist[3];
+        st_mag += rawGain_martialArtist[4];        st_res += rawGain_martialArtist[5];        st_spd += rawGain_martialArtist[6];
+        bonusAmt = bonusAmt_martialArtist;
+        for (var a=0; a < bonusAmt; a++){
+            if (bonusRoll < bCh_martialArtist[0]){                st_hp += hpBonGain; console.log("+hp");            }
+            else if (bonusRoll < bCh_martialArtist[1]){                st_mp += mpBonGain; console.log("+mp");            }
+            else if (bonusRoll < bCh_martialArtist[2]){                st_atk++; console.log("+atk");            }
+            else if (bonusRoll < bCh_martialArtist[3]){                st_def++; console.log("+def");            }
+            else if (bonusRoll < bCh_martialArtist[4]){                st_mag++; console.log("+mag");            }
+            else if (bonusRoll < bCh_martialArtist[5]){                st_res++; console.log("+res");            }
+            else if (bonusRoll <= bCh_martialArtist[6]){                st_spd++; console.log("+spd");            }
+            bonusRoll = Math.floor(Math.floor(Math.random()*100) + 0); //reset
+        }
+    }
+    else if (job == "jobNinja"){
+        console.log(">> ninja Lv " + levelCount);
+        st_hp += rawGain_ninja[0];        st_mp += rawGain_ninja[1];        st_atk += rawGain_ninja[2];        st_def += rawGain_ninja[3];
+        st_mag += rawGain_ninja[4];        st_res += rawGain_ninja[5];        st_spd += rawGain_ninja[6];
+        bonusAmt = bonusAmt_ninja;
+        for (var a=0; a < bonusAmt; a++){
+            if (bonusRoll < bCh_ninja[0]){                st_hp += hpBonGain; console.log("+hp");            }
+            else if (bonusRoll < bCh_ninja[1]){                st_mp += mpBonGain; console.log("+mp");            }
+            else if (bonusRoll < bCh_ninja[2]){                st_atk++; console.log("+atk");            }
+            else if (bonusRoll < bCh_ninja[3]){                st_def++; console.log("+def");            }
+            else if (bonusRoll < bCh_ninja[4]){                st_mag++; console.log("+mag");            }
+            else if (bonusRoll < bCh_ninja[5]){                st_res++; console.log("+res");            }
+            else if (bonusRoll <= bCh_ninja[6]){                st_spd++; console.log("+spd");            }
+            bonusRoll = Math.floor(Math.floor(Math.random()*100) + 0); //reset
+        }
+    }
+    else if (job == "jobSamurai"){
+        console.log(">> samurai Lv " + levelCount);
+        st_hp += rawGain_samurai[0];        st_mp += rawGain_samurai[1];        st_atk += rawGain_samurai[2];        st_def += rawGain_samurai[3];
+        st_mag += rawGain_samurai[4];        st_res += rawGain_samurai[5];        st_spd += rawGain_samurai[6];
+        bonusAmt = bonusAmt_samurai;
+        for (var a=0; a < bonusAmt; a++){
+            if (bonusRoll < bCh_samurai[0]){                st_hp += hpBonGain; console.log("+hp");            }
+            else if (bonusRoll < bCh_samurai[1]){                st_mp += mpBonGain; console.log("+mp");            }
+            else if (bonusRoll < bCh_samurai[2]){                st_atk++; console.log("+atk");            }
+            else if (bonusRoll < bCh_samurai[3]){                st_def++; console.log("+def");            }
+            else if (bonusRoll < bCh_samurai[4]){                st_mag++; console.log("+mag");            }
+            else if (bonusRoll < bCh_samurai[5]){                st_res++; console.log("+res");            }
+            else if (bonusRoll <= bCh_samurai[6]){                st_spd++; console.log("+spd");            }
+            bonusRoll = Math.floor(Math.floor(Math.random()*100) + 0); //reset
+        }
+    }
+    else if (job == "jobSpiritLancer"){
+        console.log(">> spiritLancer Lv " + levelCount);
+        st_hp += rawGain_spiritLancer[0];        st_mp += rawGain_spiritLancer[1];        st_atk += rawGain_spiritLancer[2];        st_def += rawGain_spiritLancer[3];
+        st_mag += rawGain_spiritLancer[4];        st_res += rawGain_spiritLancer[5];        st_spd += rawGain_spiritLancer[6];
+        bonusAmt = bonusAmt_spiritLancer;
+        for (var a=0; a < bonusAmt; a++){
+            if (bonusRoll < bCh_spiritLancer[0]){                st_hp += hpBonGain; console.log("+hp");            }
+            else if (bonusRoll < bCh_spiritLancer[1]){                st_mp += mpBonGain; console.log("+mp");            }
+            else if (bonusRoll < bCh_spiritLancer[2]){                st_atk++; console.log("+atk");            }
+            else if (bonusRoll < bCh_spiritLancer[3]){                st_def++; console.log("+def");            }
+            else if (bonusRoll < bCh_spiritLancer[4]){                st_mag++; console.log("+mag");            }
+            else if (bonusRoll < bCh_spiritLancer[5]){                st_res++; console.log("+res");            }
+            else if (bonusRoll <= bCh_spiritLancer[6]){                st_spd++; console.log("+spd");            }
+            bonusRoll = Math.floor(Math.floor(Math.random()*100) + 0); //reset
+        }
+    }
+    else if (job == "jobTemporalKnight"){
+        console.log(">> temporalKnight Lv " + levelCount);
+        st_hp += rawGain_temporalKnight[0];        st_mp += rawGain_temporalKnight[1];        st_atk += rawGain_temporalKnight[2];        st_def += rawGain_temporalKnight[3];
+        st_mag += rawGain_temporalKnight[4];        st_res += rawGain_temporalKnight[5];        st_spd += rawGain_temporalKnight[6];
+        bonusAmt = bonusAmt_temporalKnight;
+        for (var a=0; a < bonusAmt; a++){
+            if (bonusRoll < bCh_temporalKnight[0]){                st_hp += hpBonGain; console.log("+hp");            }
+            else if (bonusRoll < bCh_temporalKnight[1]){                st_mp += mpBonGain; console.log("+mp");            }
+            else if (bonusRoll < bCh_temporalKnight[2]){                st_atk++; console.log("+atk");            }
+            else if (bonusRoll < bCh_temporalKnight[3]){                st_def++; console.log("+def");            }
+            else if (bonusRoll < bCh_temporalKnight[4]){                st_mag++; console.log("+mag");            }
+            else if (bonusRoll < bCh_temporalKnight[5]){                st_res++; console.log("+res");            }
+            else if (bonusRoll <= bCh_temporalKnight[6]){                st_spd++; console.log("+spd");            }
+            bonusRoll = Math.floor(Math.floor(Math.random()*100) + 0); //reset
+        }
+    }
+    else if (job == "jobGladiator"){
+    console.log(">> gladiator Lv " + levelCount);
+    st_hp += rawGain_gladiator[0];        st_mp += rawGain_gladiator[1];        st_atk += rawGain_gladiator[2];        st_def += rawGain_gladiator[3];
+    st_mag += rawGain_gladiator[4];        st_res += rawGain_gladiator[5];        st_spd += rawGain_gladiator[6];
+    bonusAmt = bonusAmt_gladiator;
+    for (var a=0; a < bonusAmt; a++){
+        if (bonusRoll < bCh_gladiator[0]){                st_hp += hpBonGain; console.log("+hp");            }
+        else if (bonusRoll < bCh_gladiator[1]){                st_mp += mpBonGain; console.log("+mp");            }
+        else if (bonusRoll < bCh_gladiator[2]){                st_atk++; console.log("+atk");            }
+        else if (bonusRoll < bCh_gladiator[3]){                st_def++; console.log("+def");            }
+        else if (bonusRoll < bCh_gladiator[4]){                st_mag++; console.log("+mag");            }
+        else if (bonusRoll < bCh_gladiator[5]){                st_res++; console.log("+res");            }
+        else if (bonusRoll <= bCh_gladiator[6]){                st_spd++; console.log("+spd");            }
+        bonusRoll = Math.floor(Math.floor(Math.random()*100) + 0); //reset
+    }
+}
+    else if (job == "jobArchMage"){
+    console.log(">> archMage Lv " + levelCount);
+    st_hp += rawGain_archMage[0];        st_mp += rawGain_archMage[1];        st_atk += rawGain_archMage[2];        st_def += rawGain_archMage[3];
+    st_mag += rawGain_archMage[4];        st_res += rawGain_archMage[5];        st_spd += rawGain_archMage[6];
+    bonusAmt = bonusAmt_archMage;
+    for (var a=0; a < bonusAmt; a++){
+        if (bonusRoll < bCh_archMage[0]){                st_hp += hpBonGain; console.log("+hp");            }
+        else if (bonusRoll < bCh_archMage[1]){                st_mp += mpBonGain; console.log("+mp");            }
+        else if (bonusRoll < bCh_archMage[2]){                st_atk++; console.log("+atk");            }
+        else if (bonusRoll < bCh_archMage[3]){                st_def++; console.log("+def");            }
+        else if (bonusRoll < bCh_archMage[4]){                st_mag++; console.log("+mag");            }
+        else if (bonusRoll < bCh_archMage[5]){                st_res++; console.log("+res");            }
+        else if (bonusRoll <= bCh_archMage[6]){                st_spd++; console.log("+spd");            }
+        bonusRoll = Math.floor(Math.floor(Math.random()*100) + 0); //reset
+    }
+}
+    else if (job == "jobOracle"){
+    console.log(">> oracle Lv " + levelCount);
+    st_hp += rawGain_oracle[0];        st_mp += rawGain_oracle[1];        st_atk += rawGain_oracle[2];        st_def += rawGain_oracle[3];
+    st_mag += rawGain_oracle[4];        st_res += rawGain_oracle[5];        st_spd += rawGain_oracle[6];
+    bonusAmt = bonusAmt_oracle;
+    for (var a=0; a < bonusAmt; a++){
+        if (bonusRoll < bCh_oracle[0]){                st_hp += hpBonGain; console.log("+hp");            }
+        else if (bonusRoll < bCh_oracle[1]){                st_mp += mpBonGain; console.log("+mp");            }
+        else if (bonusRoll < bCh_oracle[2]){                st_atk++; console.log("+atk");            }
+        else if (bonusRoll < bCh_oracle[3]){                st_def++; console.log("+def");            }
+        else if (bonusRoll < bCh_oracle[4]){                st_mag++; console.log("+mag");            }
+        else if (bonusRoll < bCh_oracle[5]){                st_res++; console.log("+res");            }
+        else if (bonusRoll <= bCh_oracle[6]){                st_spd++; console.log("+spd");            }
+        bonusRoll = Math.floor(Math.floor(Math.random()*100) + 0); //reset
+    }
+}
+    else if (job == "jobPriest"){
+    console.log(">> priest Lv " + levelCount);
+    st_hp += rawGain_priest[0];        st_mp += rawGain_priest[1];        st_atk += rawGain_priest[2];        st_def += rawGain_priest[3];
+    st_mag += rawGain_priest[4];        st_res += rawGain_priest[5];        st_spd += rawGain_priest[6];
+    bonusAmt = bonusAmt_priest;
+    for (var a=0; a < bonusAmt; a++){
+        if (bonusRoll < bCh_priest[0]){                st_hp += hpBonGain; console.log("+hp");            }
+        else if (bonusRoll < bCh_priest[1]){                st_mp += mpBonGain; console.log("+mp");            }
+        else if (bonusRoll < bCh_priest[2]){                st_atk++; console.log("+atk");            }
+        else if (bonusRoll < bCh_priest[3]){                st_def++; console.log("+def");            }
+        else if (bonusRoll < bCh_priest[4]){                st_mag++; console.log("+mag");            }
+        else if (bonusRoll < bCh_priest[5]){                st_res++; console.log("+res");            }
+        else if (bonusRoll <= bCh_priest[6]){                st_spd++; console.log("+spd");            }
+        bonusRoll = Math.floor(Math.floor(Math.random()*100) + 0); //reset
+    }
+}
+    else if (job == "jobSorceror"){
+    console.log(">> sorceror Lv " + levelCount);
+    st_hp += rawGain_sorceror[0];        st_mp += rawGain_sorceror[1];        st_atk += rawGain_sorceror[2];        st_def += rawGain_sorceror[3];
+    st_mag += rawGain_sorceror[4];        st_res += rawGain_sorceror[5];        st_spd += rawGain_sorceror[6];
+    bonusAmt = bonusAmt_sorceror;
+    for (var a=0; a < bonusAmt; a++){
+        if (bonusRoll < bCh_sorceror[0]){                st_hp += hpBonGain; console.log("+hp");            }
+        else if (bonusRoll < bCh_sorceror[1]){                st_mp += mpBonGain; console.log("+mp");            }
+        else if (bonusRoll < bCh_sorceror[2]){                st_atk++; console.log("+atk");            }
+        else if (bonusRoll < bCh_sorceror[3]){                st_def++; console.log("+def");            }
+        else if (bonusRoll < bCh_sorceror[4]){                st_mag++; console.log("+mag");            }
+        else if (bonusRoll < bCh_sorceror[5]){                st_res++; console.log("+res");            }
+        else if (bonusRoll <= bCh_sorceror[6]){                st_spd++; console.log("+spd");            }
+        bonusRoll = Math.floor(Math.floor(Math.random()*100) + 0); //reset
+    }
+}
+    else if (job == "jobSummoner"){
+    console.log(">> summoner Lv " + levelCount);
+    st_hp += rawGain_summoner[0];        st_mp += rawGain_summoner[1];        st_atk += rawGain_summoner[2];        st_def += rawGain_summoner[3];
+    st_mag += rawGain_summoner[4];        st_res += rawGain_summoner[5];        st_spd += rawGain_summoner[6];
+    bonusAmt = bonusAmt_summoner;
+    for (var a=0; a < bonusAmt; a++){
+        if (bonusRoll < bCh_summoner[0]){                st_hp += hpBonGain; console.log("+hp");            }
+        else if (bonusRoll < bCh_summoner[1]){                st_mp += mpBonGain; console.log("+mp");            }
+        else if (bonusRoll < bCh_summoner[2]){                st_atk++; console.log("+atk");            }
+        else if (bonusRoll < bCh_summoner[3]){                st_def++; console.log("+def");            }
+        else if (bonusRoll < bCh_summoner[4]){                st_mag++; console.log("+mag");            }
+        else if (bonusRoll < bCh_summoner[5]){                st_res++; console.log("+res");            }
+        else if (bonusRoll <= bCh_summoner[6]){                st_spd++; console.log("+spd");            }
+        bonusRoll = Math.floor(Math.floor(Math.random()*100) + 0); //reset
+    }
+}
     refreshHTML();
 }
 //=====================================================================================================
@@ -156,7 +446,20 @@ function writeStat(){
     if (job == "jobKnight"){        console.log("Job: Knight");    }
     else if (job == "jobMage"){        console.log("Job: Mage");    }
     else if (job == "jobArcher"){        console.log("Job: Archer");    }
+    else if (job == "jobGladiator"){        console.log("Job: Gladiator");    }
+    else if (job == "jobPaladin"){        console.log("Job: Paladin");    }
+    else if (job == "jobSentinel"){        console.log("Job: Sentinel");    }
+    else if (job == "jobMartialArtist"){        console.log("Job: Martial Artist");    }
+    else if (job == "jobNinja"){        console.log("Job: Ninja");    }
     else if (job == "jobSaboteur"){        console.log("Job: Saboteur");    }
+    else if (job == "jobSamurai"){        console.log("Job: Samurai");    }
+    else if (job == "jobSpiritLancer"){        console.log("Job: Spirit Lancer");    }
+    else if (job == "jobArchMage"){        console.log("Job: Arch Mage");    }
+    else if (job == "jobOracle"){        console.log("Job: Oracle");    }
+    else if (job == "jobPriest"){        console.log("Job: Priest");    }
+    else if (job == "jobSorceror"){        console.log("Job: Sorceror");    }
+    else if (job == "jobSummoner"){        console.log("Job: Summoner");    }
+    else if (job == "jobTemporalKnight"){        console.log("Job: Temporal Knight");    }
     writeHTML();
 }
 //var sttt = document.getElementById('statWindow');
@@ -215,6 +518,162 @@ var jobSelect = "x";
             tb_mag.innerHTML = st_mag; tb_res.innerHTML = st_res;
             tb_spd.innerHTML = st_spd;
         }
+        else if (job == "jobPaladin"){
+            st_hp = job_paladin[0]; st_mp = job_paladin[1];
+            st_atk = job_paladin[2]; st_def = job_paladin[3];
+            st_mag = job_paladin[4]; st_res = job_paladin[5];
+            st_spd = job_paladin[6];
+            jobSelect = "Paladin";            jobDisplay.innerHTML = jobSelect;
+            lvDisplay.innerHTML = "Lv. " + levelCount;
+            tb_hp.innerHTML = st_hp; tb_mp.innerHTML = st_mp;
+            tb_atk.innerHTML = st_atk; tb_def.innerHTML = st_def;
+            tb_mag.innerHTML = st_mag; tb_res.innerHTML = st_res;
+            tb_spd.innerHTML = st_spd;
+        }
+        else if (job == "jobSentinel"){
+            st_hp = job_sentinel[0]; st_mp = job_sentinel[1];
+            st_atk = job_sentinel[2]; st_def = job_sentinel[3];
+            st_mag = job_sentinel[4]; st_res = job_sentinel[5];
+            st_spd = job_sentinel[6];
+            jobSelect = "Sentinel";            jobDisplay.innerHTML = jobSelect;
+            lvDisplay.innerHTML = "Lv. " + levelCount;
+            tb_hp.innerHTML = st_hp; tb_mp.innerHTML = st_mp;
+            tb_atk.innerHTML = st_atk; tb_def.innerHTML = st_def;
+            tb_mag.innerHTML = st_mag; tb_res.innerHTML = st_res;
+            tb_spd.innerHTML = st_spd;
+        }
+        else if (job == "jobMartialArtist"){
+            st_hp = job_martialArtist[0]; st_mp = job_martialArtist[1];
+            st_atk = job_martialArtist[2]; st_def = job_martialArtist[3];
+            st_mag = job_martialArtist[4]; st_res = job_martialArtist[5];
+            st_spd = job_martialArtist[6];
+            jobSelect = "MartialArtist";            jobDisplay.innerHTML = jobSelect;
+            lvDisplay.innerHTML = "Lv. " + levelCount;
+            tb_hp.innerHTML = st_hp; tb_mp.innerHTML = st_mp;
+            tb_atk.innerHTML = st_atk; tb_def.innerHTML = st_def;
+            tb_mag.innerHTML = st_mag; tb_res.innerHTML = st_res;
+            tb_spd.innerHTML = st_spd;
+        }
+        else if (job == "jobNinja"){
+            st_hp = job_ninja[0]; st_mp = job_ninja[1];
+            st_atk = job_ninja[2]; st_def = job_ninja[3];
+            st_mag = job_ninja[4]; st_res = job_ninja[5];
+            st_spd = job_ninja[6];
+            jobSelect = "Ninja";            jobDisplay.innerHTML = jobSelect;
+            lvDisplay.innerHTML = "Lv. " + levelCount;
+            tb_hp.innerHTML = st_hp; tb_mp.innerHTML = st_mp;
+            tb_atk.innerHTML = st_atk; tb_def.innerHTML = st_def;
+            tb_mag.innerHTML = st_mag; tb_res.innerHTML = st_res;
+            tb_spd.innerHTML = st_spd;
+        }
+        else if (job == "jobSamurai"){
+            st_hp = job_samurai[0]; st_mp = job_samurai[1];
+            st_atk = job_samurai[2]; st_def = job_samurai[3];
+            st_mag = job_samurai[4]; st_res = job_samurai[5];
+            st_spd = job_samurai[6];
+            jobSelect = "Samurai";            jobDisplay.innerHTML = jobSelect;
+            lvDisplay.innerHTML = "Lv. " + levelCount;
+            tb_hp.innerHTML = st_hp; tb_mp.innerHTML = st_mp;
+            tb_atk.innerHTML = st_atk; tb_def.innerHTML = st_def;
+            tb_mag.innerHTML = st_mag; tb_res.innerHTML = st_res;
+            tb_spd.innerHTML = st_spd;
+        }
+        else if (job == "jobSpiritLancer"){
+            st_hp = job_spiritLancer[0]; st_mp = job_spiritLancer[1];
+            st_atk = job_spiritLancer[2]; st_def = job_spiritLancer[3];
+            st_mag = job_spiritLancer[4]; st_res = job_spiritLancer[5];
+            st_spd = job_spiritLancer[6];
+            jobSelect = "Spirit Lancer";            jobDisplay.innerHTML = jobSelect;
+            lvDisplay.innerHTML = "Lv. " + levelCount;
+            tb_hp.innerHTML = st_hp; tb_mp.innerHTML = st_mp;
+            tb_atk.innerHTML = st_atk; tb_def.innerHTML = st_def;
+            tb_mag.innerHTML = st_mag; tb_res.innerHTML = st_res;
+            tb_spd.innerHTML = st_spd;
+        }
+        else if (job == "jobTemporalKnight"){
+            st_hp = job_temporalKnight[0]; st_mp = job_temporalKnight[1];
+            st_atk = job_temporalKnight[2]; st_def = job_temporalKnight[3];
+            st_mag = job_temporalKnight[4]; st_res = job_temporalKnight[5];
+            st_spd = job_temporalKnight[6];
+            jobSelect = "Temporal Knight";            jobDisplay.innerHTML = jobSelect;
+            lvDisplay.innerHTML = "Lv. " + levelCount;
+            tb_hp.innerHTML = st_hp; tb_mp.innerHTML = st_mp;
+            tb_atk.innerHTML = st_atk; tb_def.innerHTML = st_def;
+            tb_mag.innerHTML = st_mag; tb_res.innerHTML = st_res;
+            tb_spd.innerHTML = st_spd;
+        }
+        else if (job == "jobGladiator"){
+            st_hp = job_gladiator[0]; st_mp = job_gladiator[1];
+            st_atk = job_gladiator[2]; st_def = job_gladiator[3];
+            st_mag = job_gladiator[4]; st_res = job_gladiator[5];
+            st_spd = job_gladiator[6];
+            jobSelect = "Gladiator";            jobDisplay.innerHTML = jobSelect;
+            lvDisplay.innerHTML = "Lv. " + levelCount;
+            tb_hp.innerHTML = st_hp; tb_mp.innerHTML = st_mp;
+            tb_atk.innerHTML = st_atk; tb_def.innerHTML = st_def;
+            tb_mag.innerHTML = st_mag; tb_res.innerHTML = st_res;
+            tb_spd.innerHTML = st_spd;
+        }
+        else if (job == "jobArchMage"){
+            st_hp = job_archMage[0]; st_mp = job_archMage[1];
+            st_atk = job_archMage[2]; st_def = job_archMage[3];
+            st_mag = job_archMage[4]; st_res = job_archMage[5];
+            st_spd = job_archMage[6];
+            jobSelect = "ArchMage";            jobDisplay.innerHTML = jobSelect;
+            lvDisplay.innerHTML = "Lv. " + levelCount;
+            tb_hp.innerHTML = st_hp; tb_mp.innerHTML = st_mp;
+            tb_atk.innerHTML = st_atk; tb_def.innerHTML = st_def;
+            tb_mag.innerHTML = st_mag; tb_res.innerHTML = st_res;
+            tb_spd.innerHTML = st_spd;
+        }
+        else if (job == "jobOracle"){
+            st_hp = job_oracle[0]; st_mp = job_oracle[1];
+            st_atk = job_oracle[2]; st_def = job_oracle[3];
+            st_mag = job_oracle[4]; st_res = job_oracle[5];
+            st_spd = job_oracle[6];
+            jobSelect = "Oracle";            jobDisplay.innerHTML = jobSelect;
+            lvDisplay.innerHTML = "Lv. " + levelCount;
+            tb_hp.innerHTML = st_hp; tb_mp.innerHTML = st_mp;
+            tb_atk.innerHTML = st_atk; tb_def.innerHTML = st_def;
+            tb_mag.innerHTML = st_mag; tb_res.innerHTML = st_res;
+            tb_spd.innerHTML = st_spd;
+        }
+        else if (job == "jobPriest"){
+            st_hp = job_priest[0]; st_mp = job_priest[1];
+            st_atk = job_priest[2]; st_def = job_priest[3];
+            st_mag = job_priest[4]; st_res = job_priest[5];
+            st_spd = job_priest[6];
+            jobSelect = "Priest";            jobDisplay.innerHTML = jobSelect;
+            lvDisplay.innerHTML = "Lv. " + levelCount;
+            tb_hp.innerHTML = st_hp; tb_mp.innerHTML = st_mp;
+            tb_atk.innerHTML = st_atk; tb_def.innerHTML = st_def;
+            tb_mag.innerHTML = st_mag; tb_res.innerHTML = st_res;
+            tb_spd.innerHTML = st_spd;
+        }
+        else if (job == "jobSorceror"){
+            st_hp = job_sorceror[0]; st_mp = job_sorceror[1];
+            st_atk = job_sorceror[2]; st_def = job_sorceror[3];
+            st_mag = job_sorceror[4]; st_res = job_sorceror[5];
+            st_spd = job_sorceror[6];
+            jobSelect = "Sorceror";            jobDisplay.innerHTML = jobSelect;
+            lvDisplay.innerHTML = "Lv. " + levelCount;
+            tb_hp.innerHTML = st_hp; tb_mp.innerHTML = st_mp;
+            tb_atk.innerHTML = st_atk; tb_def.innerHTML = st_def;
+            tb_mag.innerHTML = st_mag; tb_res.innerHTML = st_res;
+            tb_spd.innerHTML = st_spd;
+        }
+        else if (job == "jobSummoner"){
+            st_hp = job_summoner[0]; st_mp = job_summoner[1];
+            st_atk = job_summoner[2]; st_def = job_summoner[3];
+            st_mag = job_summoner[4]; st_res = job_summoner[5];
+            st_spd = job_summoner[6];
+            jobSelect = "Summoner";            jobDisplay.innerHTML = jobSelect;
+            lvDisplay.innerHTML = "Lv. " + levelCount;
+            tb_hp.innerHTML = st_hp; tb_mp.innerHTML = st_mp;
+            tb_atk.innerHTML = st_atk; tb_def.innerHTML = st_def;
+            tb_mag.innerHTML = st_mag; tb_res.innerHTML = st_res;
+            tb_spd.innerHTML = st_spd;
+        }
     }
 //------------------------------------------------------------------------------------------
 function refreshHTML(){
@@ -223,6 +682,21 @@ function refreshHTML(){
     tb_mag.innerHTML = st_mag; tb_res.innerHTML = st_res;
     tb_spd.innerHTML = st_spd;
     lvDisplay.innerHTML = "Lv. " + levelCount;
+}
+function levelUp10(){
+    for (var i=0; i<9;i++){
+        levelUp();
+    }
+}
+function levelUp50(){
+    for (var i=0; i<49;i++){
+        levelUp();
+    }
+}
+function levelUp200(){
+    for (var i=0; i<199;i++){
+        levelUp();
+    }
 }
 </script>
 </head>
@@ -238,12 +712,34 @@ function refreshHTML(){
         color: #fff;
     }
 </style>
-<br><input type="submit" value="Knight" onclick="setKnight()" />
-<input type="submit" value="Mage" onclick="setMage()" />
+<br>
+<input type="submit" value="Martial Artist" onclick="setMartialArtist()" />
+<input type="submit" value="Gladiator" onclick="setGladiator()" />
+<input type="submit" value="Paladin" onclick="setPaladin()" />
+<input type="submit" value="Ninja" onclick="setNinja()" /> ||
+<input type="submit" value="Knight" onclick="setKnight()" />
 <input type="submit" value="Archer" onclick="setArcher()" />
 <input type="submit" value="Saboteur" onclick="setSaboteur()" />
+<input type="submit" value="Sentinel" onclick="setSentinel()" />
+<input type="submit" value="Samurai" onclick="setSamurai()" />
+<input type="submit" value="Spirit Lancer" onclick="setSpiritLancer()" />
 
-<br><br><input type="submit" value="Level Up" onclick="levelUp()" /><hr>
+<br><input type="submit" value="Summoner" onclick="setSummoner()" />
+<input type="submit" value="Sorceror" onclick="setSorceror()" />
+<input type="submit" value="Oracle" onclick="setOracle()" /> ||
+<input type="submit" value="Mage" onclick="setMage()" />
+<input type="submit" value="Arch Mage" onclick="setArchMage()" />
+<input type="submit" value="Priest" onclick="setPriest()" />
+
+<br><input type="submit" value="Temporal Knight" onclick="setTemporalKnight()" />
+
+<input type="submit" value="" onclick="set()" />
+
+<br><br><input type="submit" value="Level Up" onclick="levelUp()" />
+<input type="submit" value="10" onclick="levelUp10()" />
+<input type="submit" value="50" onclick="levelUp50()" />
+<input type="submit" value="200" onclick="levelUp200()" />
+<hr>
 
 <div id="statWindow">[]</div>
 <br><table>
