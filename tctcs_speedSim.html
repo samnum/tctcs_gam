@@ -1,0 +1,130 @@
+<!DOCtype html><html><head><title>Speed sim</title></head>
+<body>
+<style>
+    body {
+        background-color: #000000;
+        color:rgb(212, 243, 255)
+    }
+    table,    td {
+        border: 2px solid rgb(80, 80, 80);
+    }
+    thead,    tfoot {
+        background-color: rgb(15, 15, 15);
+        color: rgb(248, 210, 212);
+    }
+    .sliderContainer{
+        width: 100%;
+    }
+    .sliderUnitAmt{
+        -webkit-appearance: none;
+        width: 200px;
+        height: 15px;
+        background: rgb(109, 109, 109);
+        outline: none;
+        opacity: 0.6;
+        -webkit-transition: 0.2s;
+        transition: opacity 0.2s;
+    }
+    .slider{
+        -webkit-appearance: none;
+        width: 400px;
+        height: 10px;
+        background: rgb(125, 145, 158);
+        outline: none;
+        opacity: 0.6;
+        -webkit-transition: 0.2s;
+        transition: opacity 0.2s;
+    }
+    .sliderUnitAmt:hover{
+        opacity: 1;
+    }
+    .sliderUnitAmt::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 8px;
+        height: 15px;
+        background: #4262cc;
+        cursor: pointer;
+    }
+
+    .sliderUnitAmt::-moz-range-thumb {
+        width: 10px;
+        height: 15px;
+        background: #19429b;
+        cursor: pointer;
+    }
+</style><br>
+<div class="sliderContainer">
+    <input type="range" min="1" max="25" value="7" class="sliderUnitAmt" id="slidey">
+    <input type="submit" value="Submit" onclick="unitAmtSubmit()" />
+    | Unit Amt: <span id="amtOutput"></span>
+</div>
+<div id="speedInputDiv"><br></div>
+<br>
+<table id="speedTable">
+    <thead>
+        <tr><th colspan='25'>Ticks</th></tr>
+    </thead>
+</table>
+
+<hr><input type="button" name="getData" value="mmmmmm" onClick="writeTable()">
+<table id="dynTable">
+    <th>aa</th>
+</table>
+
+<script language="Javascript" type="text/javascript">//===============================================================
+function writeTable(){
+    var num = [1,2,3,4,5];
+    var num1 = ['bb','cs','mb','fb','ml'];
+    var num2 = [43,35,36,75,11];
+    var num3 = [5,5,6,6,7];
+    var dynamicTable=document.getElementById("dynTable");
+    for(var c=0;c<num.length;c++){
+        //console.log("numba: " + num[c] + " | num1: " + num1[c] + " | num2: " + num2[c]);
+        var newRow = dynamicTable.insertRow();
+        var newCell1 = newRow.insertCell(0);
+        var newCell2 = newRow.insertCell(1);
+        var newCell3 = newRow.insertCell(2);
+        var newCell4 = newRow.insertCell(3);
+
+        newCell1.innerHTML = num[c];
+        newCell2.innerHTML = num1[c];
+        newCell3.innerHTML = num2[c];
+        newCell4.innerHTML = num3[c];
+    }
+}
+
+var st_spd; 
+var spdMult = 0.04;
+var TICK = 0;
+var unitAmt = 0;
+var tickSpeed = st_spd * spdMult;
+var tickSpeedRounded = Math.round(tickSpeed);
+var st_spdTotal;
+var turnMargin = st_spdTotal / unitAmt;
+
+var speedSliders = document.getElementById("speedInputDiv");
+var unitCount = 0;
+function unitAmtSubmit(){
+    unitAmt = unitSliderInput;
+    console.log(unitAmt);
+    for (var q=0; q<unitAmt; q++){
+        unitCount++;
+        speedInputDiv.innerHTML += unitCount + "<input type='range' min='1' max='2000' value='1600' class='slider' id='slider_u1'><br>";
+    }
+    speedInputDiv.innerHTML += "<input type='submit' value='Submit Speedz' onclick='xxxx()' /><hr>"
+    //innerHTML friendly slider: <input type='range' min='1' max='2000' value='1600' class='slider' id='xxxxx'>
+    //innerHTML friendly btn: <input type='submit' value='xxxx' onclick='xxxx()' />
+}  
+//Slider shit  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+var sliderUnit = document.getElementById("slidey");
+var output = document.getElementById("amtOutput");
+var unitSliderInput; 
+output.innerHTML = sliderUnit.value;
+sliderUnit.oninput = function(){
+    output.innerHTML = this.value;
+    unitSliderInput = this.value;
+}
+</script>
+</body>
+</html>
