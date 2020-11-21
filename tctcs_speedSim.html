@@ -1,5 +1,544 @@
 <!DOCtype html><html><head><title>Speed sim</title></head>
 <body>
+<br>
+<div class="sliderContainer">
+    <input type="range" min="1" max="25" value="1" class="sliderUnitAmt" id="slidey">
+    <input type="submit" value="Submit" onclick="unitAmtSubmit()" />
+    | Unit Amt: <span id="amtOutput"></span>
+</div>
+<br><input type="submit" value="Toggle" onclick="toggleMethod()" />
+<input type='submit' value='test' onclick='testt()'><hr>
+<div id="speedInputDiv">
+    <br><span id="span1">Unit 01|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u1'><br><span id='output_u1'>[1]</span></span>
+    <br><span id="span2">Unit 02|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u2'><br><span id='output_u2'>[2]</span></span>
+    <br><span id="span3">Unit 03|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u3'><br><span id='output_u3'>[3]</span></span>
+    <br><span id="span4">Unit 04|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u4'><br><span id='output_u4'>[4]</span></span>
+    <br><span id="span5">Unit 05|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u5'><br><span id='output_u5'>[5]</span></span>
+    <br><span id="span6">Unit 06|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u6'><br><span id='output_u6'>[6]</span></span>
+    <br><span id="span7">Unit 07|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u7'><br><span id='output_u7'>[7]</span></span>
+    <br><span id="span8">Unit 08|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u8'><br><span id='output_u8'>[8]</span></span>
+    <br><span id="span9">Unit 09|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u9'><br><span id='output_u9'>[9]</span></span>
+    <br><span id="span10">Unit 10|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u10'><br><span id='output_u10'>[10]</span></span>
+    <br><span id="span11">Unit 11|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u11'><br><span id='output_u11'>[11]</span></span>
+    <br><span id="span12">Unit 12|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u12'><br><span id='output_u12'>[12]</span></span>
+    <br><span id="span13">Unit 13|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u13'><br><span id='output_u13'>[13]</span></span>
+    <br><span id="span14">Unit 14|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u14'><br><span id='output_u14'>[14]</span></span>
+    <br><span id="span15">Unit 15|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u15'><br><span id='output_u15'>[15]</span></span>
+    <br><span id="span16">Unit 16|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u16'><br><span id='output_u16'>[16]</span></span>
+    <br><span id="span17">Unit 17|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u17'><br><span id='output_u17'>[17]</span></span>
+    <br><span id="span18">Unit 18|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u18'><br><span id='output_u18'>[18]</span></span>
+    <br><span id="span19">Unit 19|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u19'><br><span id='output_u19'>[19]</span></span>
+    <br><span id="span20">Unit 20|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u20'><br><span id='output_u20'>[20]</span></span>
+    <br><span id="span21">Unit 21|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u21'><br><span id='output_u21'>[21]</span></span>
+    <br><span id="span22">Unit 22|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u22'><br><span id='output_u22'>[22]</span></span>
+    <br><span id="span23">Unit 23|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u23'><br><span id='output_u23'>[23]</span></span>
+    <br><span id="span24">Unit 24|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u24'><br><span id='output_u24'>[24]</span></span>
+    <br><span id="span25">Unit 25|<input type='range' min='1' max='1500' value='400' class='slider' id='slider_u25'><br><span id='output_u25'>[25]</span></span>
+</div>
+<br>
+<table id="speedTable">
+    <thead>
+        <tr><th colspan='25'><span id='tableHeader'></th></tr>
+    </thead>
+</table>
+
+<hr><input type="button" name="getData" value="mmmmmm" onClick="writeTable()">
+<table id="dynTable">
+    <th>aa</th>
+</table>
+
+<script language="Javascript" type="text/javascript">//===============================================================
+
+var toggleBtn = false;
+console.log("/// " + toggleBtn);
+function toggleMethod(){
+    toggleBtn = !toggleBtn;
+    console.log("/// " + toggleBtn);
+}
+
+
+//======================================================================================
+
+
+//Slider shit  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+var sliderUnit = document.getElementById("slidey"); //slider id uu1
+var outputUnit = document.getElementById("amtOutput"); //output id
+var unitSliderInput; 
+outputUnit.innerHTML = sliderUnit.value;
+sliderUnit.oninput = function(){
+    outputUnit.innerHTML = this.value;
+    unitSliderInput = this.value;  //get value in separate var for the loop nonsense
+}
+function writeTable(){ //example
+    var num = [1,2,3,4,5];
+    var num1 = ['bb','cs','mb','fb','ml'];
+    var num2 = [43,35,36,75,11];
+    var num3 = [5,5,6,6,7];
+    var dynamicTable=document.getElementById("dynTable");
+    for(var c=0;c<num.length;c++){
+        //console.log("numba: " + num[c] + " | num1: " + num1[c] + " | num2: " + num2[c]);
+        var newRow = dynamicTable.insertRow();
+        var newCell1 = newRow.insertCell(0);
+        var newCell2 = newRow.insertCell(1);
+        var newCell3 = newRow.insertCell(2);
+        var newCell4 = newRow.insertCell(3);
+
+        newCell1.innerHTML = num[c];
+        newCell2.innerHTML = num1[c];
+        newCell3.innerHTML = num2[c];
+        newCell4.innerHTML = num3[c];
+    }
+}
+
+var st_spd; 
+var spdMult = 0.04;
+var endMult = 15;
+var TICK = 0;
+var unitAmt = 0;
+var turnMargin;
+var tickSpeed = st_spd * spdMult; //calc separately
+//var tickSpeedRounded = Math.round(tickSpeed);
+var st_spdTotal = 0;
+
+var speedSliders = document.getElementById("speedInputDiv");
+var sliderValueDef = 30;
+var unitCount = 0;
+var slider_unitCount = 0;  //slider id definition
+
+
+function unitAmtSubmit(){
+    //var sliderWhat = 'slider_u';    var outputWhat = 'output_u';
+
+    unitAmt = parseInt(unitSliderInput);
+    console.log("Unit amount: " + unitAmt);
+    if (toggleBtn == true){ //generate w innerHTML
+        speedInputDiv.innerHTML += "<hr>";
+        for (var q=0; q<unitAmt; q++){
+            unitCount++;
+            slider_unitCount++;
+            if (q < 9){
+                speedInputDiv.innerHTML += "0";
+            }
+            speedInputDiv.innerHTML += unitCount + "<input type='range' min='1' max='2000' value='" + sliderValueDef + "' class='slider' id='slider_u" 
+            + unitCount + "'><br><span id='output_u" + unitCount + "'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><br>";
+            
+            slider_u1.oninput = function(){
+                sliderOutput_uu1.innerHTML = this.value;
+            }
+            
+            sliderValueDef += 25;
+            //sliderWhat = 'slider_u';        outputWhat = 'output_u';
+        }
+
+        sliderOutput_uu1.innerHTML = "/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;" + slider_uu1.value;
+        s1_container = slider_uu1.value;
+        slider_uu1_c = document.getElementById("slider_u1");
+        console.log("1: " + slider_uu1.value);
+        speedInputDiv.innerHTML += "<input type='submit' value='Submit Speedz' onclick='testt()'><hr>";
+        slider_uu1.oninput = function s1_input(){
+            sliderOutput_uu1.innerHTML = "[ &nbsp; &nbsp; &nbsp;" + this.value + "]";
+            console.log(slider_uu1.value);
+        }
+    }
+    else if(toggleBtn == false){ //manual dumb
+        var yy = 25;
+        if (unitAmt < yy){
+            span_uu25.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu24.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu23.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu22.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu21.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu20.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu19.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu18.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu17.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu16.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu15.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu14.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu13.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu12.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu11.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu10.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu9.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu8.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu7.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu6.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu5.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu4.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu3.innerHTML = ""; yy--;
+        }
+        if (unitAmt < yy){
+            span_uu2.innerHTML = ""; yy--;
+        }
+        /*        var clearCount = 0;
+        var spContainer;
+        clearCount = unitAmt;
+        var spanList = [TICK,span_uu1,span_uu2,span_uu3,span_uu4,span_uu5,span_uu6,span_uu7,span_uu8];
+        console.log("[[" + clearCount);
+        for (clearCount < spanList.length; clearCount++){
+            spContainer = spanList[clearCount];
+            spContainer.innerHTML = "";
+        }*/
+    }
+}
+var slider_uu1 = document.getElementById("slider_u1");
+var sliderOutput_uu1 = document.getElementById("output_u1");    var span_uu1 = document.getElementById("span1");
+var unit1 = 0;  var u1_tickSpd;
+slider_uu1.oninput = function(){
+    sliderOutput_uu1.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu1.value;
+    unit1 = Math.round(parseInt(slider_uu1.value) * spdMult); 
+    u1_tickSpd = parseInt(slider_uu1.value) * spdMult; sliderInputAction();
+}
+var slider_uu2 = document.getElementById("slider_u2");
+var sliderOutput_uu2 = document.getElementById("output_u2");    var span_uu2 = document.getElementById("span2");
+var unit2 = 0;  var u2_tickSpd;
+slider_uu2.oninput = function(){
+    sliderOutput_uu2.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu2.value;
+    unit2 = Math.round(parseInt(slider_uu2.value) * spdMult); 
+    u2_tickSpd = parseInt(slider_uu2.value) * spdMult; sliderInputAction();
+}
+var slider_uu3 = document.getElementById("slider_u3");
+var sliderOutput_uu3 = document.getElementById("output_u3");    var span_uu3 = document.getElementById("span3");
+var unit3 = 0;  var u3_tickSpd;
+slider_uu3.oninput = function(){
+    sliderOutput_uu3.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu3.value;
+    unit3 = Math.round(parseInt(slider_uu3.value) * spdMult); 
+    u3_tickSpd = parseInt(slider_uu3.value) * spdMult; sliderInputAction();
+}
+var slider_uu4 = document.getElementById("slider_u4");
+var sliderOutput_uu4 = document.getElementById("output_u4");    var span_uu4 = document.getElementById("span4");
+var unit4 = 0;  var u4_tickSpd;
+slider_uu4.oninput = function(){
+    sliderOutput_uu4.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu4.value;
+    unit4 = Math.round(parseInt(slider_uu4.value) * spdMult); 
+    u4_tickSpd = parseInt(slider_uu4.value) * spdMult; sliderInputAction();
+}
+var slider_uu5 = document.getElementById("slider_u5");
+var sliderOutput_uu5 = document.getElementById("output_u5");    var span_uu5 = document.getElementById("span5");
+var unit5 = 0;  var u5_tickSpd;
+slider_uu5.oninput = function(){
+    sliderOutput_uu5.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu5.value;
+    unit5 = Math.round(parseInt(slider_uu5.value) * spdMult); 
+    u5_tickSpd = parseInt(slider_uu5.value) * spdMult; sliderInputAction();
+}
+var slider_uu6 = document.getElementById("slider_u6");
+var sliderOutput_uu6 = document.getElementById("output_u6");    var span_uu6 = document.getElementById("span6");
+var unit6 = 0;  var u6_tickSpd;
+slider_uu6.oninput = function(){
+    sliderOutput_uu6.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu6.value;
+    unit6 = Math.round(parseInt(slider_uu6.value) * spdMult); 
+    u6_tickSpd = parseInt(slider_uu6.value) * spdMult; sliderInputAction();
+}
+var slider_uu7 = document.getElementById("slider_u7");
+var sliderOutput_uu7 = document.getElementById("output_u7");    var span_uu7 = document.getElementById("span7");
+var unit7 = 0;  var u7_tickSpd;
+slider_uu7.oninput = function(){
+    sliderOutput_uu7.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu7.value;
+    unit7 = Math.round(parseInt(slider_uu7.value) * spdMult); 
+    u7_tickSpd = parseInt(slider_uu7.value) * spdMult; sliderInputAction();
+}
+var slider_uu8 = document.getElementById("slider_u8");
+var sliderOutput_uu8 = document.getElementById("output_u8");    var span_uu8 = document.getElementById("span8");
+var unit8 = 0;  var u8_tickSpd;
+slider_uu8.oninput = function(){
+    sliderOutput_uu8.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu8.value;
+    unit8 = Math.round(parseInt(slider_uu8.value) * spdMult); 
+    u8_tickSpd = parseInt(slider_uu8.value) * spdMult; sliderInputAction();
+}
+var slider_uu9 = document.getElementById("slider_u9");
+var sliderOutput_uu9 = document.getElementById("output_u9");    var span_uu9 = document.getElementById("span9");
+var unit9 = 0;  var u9_tickSpd;
+slider_uu9.oninput = function(){
+    sliderOutput_uu9.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu9.value;
+    unit9 = Math.round(parseInt(slider_uu9.value) * spdMult); 
+    u9_tickSpd = parseInt(slider_uu9.value) * spdMult; sliderInputAction();
+}
+var slider_uu10 = document.getElementById("slider_u10");
+var sliderOutput_uu10 = document.getElementById("output_u10");    var span_uu10 = document.getElementById("span10");
+var unit10 = 0;  var u10_tickSpd;
+slider_uu10.oninput = function(){
+    sliderOutput_uu10.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu10.value;
+    unit10 = Math.round(parseInt(slider_uu10.value) * spdMult); 
+    u10_tickSpd = parseInt(slider_uu10.value) * spdMult; sliderInputAction();
+}
+var slider_uu11 = document.getElementById("slider_u11");
+var sliderOutput_uu11 = document.getElementById("output_u11");    var span_uu11 = document.getElementById("span11");
+var unit11 = 0;  var u11_tickSpd;
+slider_uu11.oninput = function(){
+    sliderOutput_uu11.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu11.value;
+    unit11 = Math.round(parseInt(slider_uu11.value) * spdMult); 
+    u11_tickSpd = parseInt(slider_uu11.value) * spdMult; sliderInputAction();
+}
+var slider_uu12 = document.getElementById("slider_u12");
+var sliderOutput_uu12 = document.getElementById("output_u12");    var span_uu12 = document.getElementById("span12");
+var unit12 = 0;  var u12_tickSpd;
+slider_uu12.oninput = function(){
+    sliderOutput_uu12.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu12.value;
+    unit12 = Math.round(parseInt(slider_uu12.value) * spdMult); 
+    u12_tickSpd = parseInt(slider_uu12.value) * spdMult; sliderInputAction();
+}
+var slider_uu13 = document.getElementById("slider_u13");
+var sliderOutput_uu13 = document.getElementById("output_u13");    var span_uu13 = document.getElementById("span13");
+var unit13 = 0;  var u13_tickSpd;
+slider_uu13.oninput = function(){
+    sliderOutput_uu13.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu13.value;
+    unit13 = Math.round(parseInt(slider_uu13.value) * spdMult); 
+    u13_tickSpd = parseInt(slider_uu13.value) * spdMult; sliderInputAction();
+}
+var slider_uu14 = document.getElementById("slider_u14");
+var sliderOutput_uu14 = document.getElementById("output_u14");    var span_uu14 = document.getElementById("span14");
+var unit14 = 0;  var u14_tickSpd;
+slider_uu14.oninput = function(){
+    sliderOutput_uu14.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu14.value;
+    unit14 = Math.round(parseInt(slider_uu14.value) * spdMult); 
+    u14_tickSpd = parseInt(slider_uu14.value) * spdMult; sliderInputAction();
+}
+var slider_uu15 = document.getElementById("slider_u15");
+var sliderOutput_uu15 = document.getElementById("output_u15");    var span_uu15 = document.getElementById("span15");
+var unit15 = 0;  var u15_tickSpd;
+slider_uu15.oninput = function(){
+    sliderOutput_uu15.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu15.value;
+    unit15 = Math.round(parseInt(slider_uu15.value) * spdMult); 
+    u15_tickSpd = parseInt(slider_uu15.value) * spdMult; sliderInputAction();
+}
+var slider_uu16 = document.getElementById("slider_u16");
+var sliderOutput_uu16 = document.getElementById("output_u16");    var span_uu16 = document.getElementById("span16");
+var unit16 = 0;  var u16_tickSpd;
+slider_uu16.oninput = function(){
+    sliderOutput_uu16.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu16.value;
+    unit16 = Math.round(parseInt(slider_uu16.value) * spdMult); 
+    u16_tickSpd = parseInt(slider_uu16.value) * spdMult; sliderInputAction();
+}
+var slider_uu17 = document.getElementById("slider_u17");
+var sliderOutput_uu17 = document.getElementById("output_u17");    var span_uu17 = document.getElementById("span17");
+var unit17 = 0;  var u17_tickSpd;
+slider_uu17.oninput = function(){
+    sliderOutput_uu17.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu17.value;
+    unit17 = Math.round(parseInt(slider_uu17.value) * spdMult); 
+    u17_tickSpd = parseInt(slider_uu17.value) * spdMult; sliderInputAction();
+}
+var slider_uu18 = document.getElementById("slider_u18");
+var sliderOutput_uu18 = document.getElementById("output_u18");    var span_uu18 = document.getElementById("span18");
+var unit18 = 0;  var u18_tickSpd;
+slider_uu18.oninput = function(){
+    sliderOutput_uu18.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu18.value;
+    unit18 = Math.round(parseInt(slider_uu18.value) * spdMult); 
+    u18_tickSpd = parseInt(slider_uu18.value) * spdMult; sliderInputAction();
+}
+var slider_uu19 = document.getElementById("slider_u19");
+var sliderOutput_uu19 = document.getElementById("output_u19");    var span_uu19 = document.getElementById("span19");
+var unit19 = 0;  var u19_tickSpd;
+slider_uu19.oninput = function(){
+    sliderOutput_uu19.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu19.value;
+    unit19 = Math.round(parseInt(slider_uu19.value) * spdMult); 
+    u19_tickSpd = parseInt(slider_uu19.value) * spdMult; sliderInputAction();
+}
+var slider_uu20 = document.getElementById("slider_u20");
+var sliderOutput_uu20 = document.getElementById("output_u20");    var span_uu20 = document.getElementById("span20");
+var unit20 = 0;  var u20_tickSpd;
+slider_uu20.oninput = function(){
+    sliderOutput_uu20.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu20.value;
+    unit20 = Math.round(parseInt(slider_uu20.value) * spdMult); 
+    u20_tickSpd = parseInt(slider_uu20.value) * spdMult; sliderInputAction();
+}
+var slider_uu21 = document.getElementById("slider_u21");
+var sliderOutput_uu21 = document.getElementById("output_u21");    var span_uu21 = document.getElementById("span21");
+var unit21 = 0;  var u21_tickSpd;
+slider_uu21.oninput = function(){
+    sliderOutput_uu21.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu21.value;
+    unit21 = Math.round(parseInt(slider_uu21.value) * spdMult); 
+    u21_tickSpd = parseInt(slider_uu21.value) * spdMult; sliderInputAction();
+}
+var slider_uu22 = document.getElementById("slider_u22");
+var sliderOutput_uu22 = document.getElementById("output_u22");    var span_uu22 = document.getElementById("span22");
+var unit22 = 0;  var u22_tickSpd;
+slider_uu22.oninput = function(){
+    sliderOutput_uu22.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu22.value;
+    unit22 = Math.round(parseInt(slider_uu22.value) * spdMult); 
+    u22_tickSpd = parseInt(slider_uu22.value) * spdMult; sliderInputAction();
+}
+var slider_uu23 = document.getElementById("slider_u23");
+var sliderOutput_uu23 = document.getElementById("output_u23");    var span_uu23 = document.getElementById("span23");
+var unit23 = 0;  var u23_tickSpd;
+slider_uu23.oninput = function(){
+    sliderOutput_uu23.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu23.value;
+    unit23 = Math.round(parseInt(slider_uu23.value) * spdMult); 
+    u23_tickSpd = parseInt(slider_uu23.value) * spdMult; sliderInputAction();
+}
+var slider_uu24 = document.getElementById("slider_u24");
+var sliderOutput_uu24 = document.getElementById("output_u24");    var span_uu24 = document.getElementById("span24");
+var unit24 = 0;  var u24_tickSpd;
+slider_uu24.oninput = function(){
+    sliderOutput_uu24.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu24.value;
+    unit24 = Math.round(parseInt(slider_uu24.value) * spdMult); 
+    u24_tickSpd = parseInt(slider_uu24.value) * spdMult; sliderInputAction();
+}
+var slider_uu25 = document.getElementById("slider_u25");
+var sliderOutput_uu25 = document.getElementById("output_u25");    var span_uu25 = document.getElementById("span25");
+var unit25 = 0;  var u25_tickSpd;
+slider_uu25.oninput = function(){
+    sliderOutput_uu25.innerHTML =  "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; " + slider_uu25.value;
+    unit25 = Math.round(parseInt(slider_uu25.value) * spdMult); 
+    u25_tickSpd = parseInt(slider_uu25.value) * spdMult; sliderInputAction();
+}
+
+function sliderInputAction(){ //convenience
+    st_spdTotal = 0;
+    tableHead.innerHTML = "turnMargin: " + turnMargin;
+    calc();
+}
+//==============================================================================================
+var tableHead = document.getElementById("tableHeader");
+function writeTableHead(){
+    //console.log("spdTotal: " + st_spdTotal + "| turnMargin: " + turnMargin);
+    tableHead.innerHTML = "turnMargin: " + turnMargin;
+}
+function calc(){
+    st_spdTotal = 0;
+    st_spdTotal += unit1;
+    var gay = 1;
+    if (unitAmt > gay){
+        st_spdTotal += unit2; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit3; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit4; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit5; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit6; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit7; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit8; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit9; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit10; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit11; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit12; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit13; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit14; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit15; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit16; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit17; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit18; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit19; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit20; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit21; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit22; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit23; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit24; gay++;
+    }
+    if (unitAmt > gay){
+        st_spdTotal += unit25; gay++;
+    }
+    
+    turnMargin = (Math.round(st_spdTotal / unitAmt)) * endMult;
+
+    writeTableHead();
+}
+function testt(){
+    //sliderOutput_uu1.innerHTML = "aaaaaavfefef";
+    console.log("___");
+    console.log(unit8);
+}  
+    //innerHTML friendly slider: <input type='range' min='1' max='2000' value='1600' class='slider' id='xxxxx'>
+    //innerHTML friendly btn: <input type='submit' value='xxxx' onclick='xxxx()' />
+
+/*Accept that it doesnt work: 
+
+        sliderWhat += slider_unitCount;
+        outputWhat += slider_unitCount;
+        slider_uu = 'document.getElementById("';
+        slider_uu += sliderWhat;
+        slider_uu += '")';
+        sliderOutput_uu = 'document.getElementById("';
+        sliderOutput_uu += outputWhat;
+        sliderOutput_uu += '")';
+*/
+</script>
+</body>
 <style>
     body {
         background-color: #000000;
@@ -27,9 +566,9 @@
     }
     .slider{
         -webkit-appearance: none;
-        width: 400px;
-        height: 10px;
-        background: rgb(125, 145, 158);
+        width: 950px;
+        height: 11px;
+        background: rgb(105, 135, 164);
         outline: none;
         opacity: 0.6;
         -webkit-transition: 0.2s;
@@ -53,78 +592,5 @@
         background: #19429b;
         cursor: pointer;
     }
-</style><br>
-<div class="sliderContainer">
-    <input type="range" min="1" max="25" value="7" class="sliderUnitAmt" id="slidey">
-    <input type="submit" value="Submit" onclick="unitAmtSubmit()" />
-    | Unit Amt: <span id="amtOutput"></span>
-</div>
-<div id="speedInputDiv"><br></div>
-<br>
-<table id="speedTable">
-    <thead>
-        <tr><th colspan='25'>Ticks</th></tr>
-    </thead>
-</table>
-
-<hr><input type="button" name="getData" value="mmmmmm" onClick="writeTable()">
-<table id="dynTable">
-    <th>aa</th>
-</table>
-
-<script language="Javascript" type="text/javascript">//===============================================================
-function writeTable(){
-    var num = [1,2,3,4,5];
-    var num1 = ['bb','cs','mb','fb','ml'];
-    var num2 = [43,35,36,75,11];
-    var num3 = [5,5,6,6,7];
-    var dynamicTable=document.getElementById("dynTable");
-    for(var c=0;c<num.length;c++){
-        //console.log("numba: " + num[c] + " | num1: " + num1[c] + " | num2: " + num2[c]);
-        var newRow = dynamicTable.insertRow();
-        var newCell1 = newRow.insertCell(0);
-        var newCell2 = newRow.insertCell(1);
-        var newCell3 = newRow.insertCell(2);
-        var newCell4 = newRow.insertCell(3);
-
-        newCell1.innerHTML = num[c];
-        newCell2.innerHTML = num1[c];
-        newCell3.innerHTML = num2[c];
-        newCell4.innerHTML = num3[c];
-    }
-}
-
-var st_spd; 
-var spdMult = 0.04;
-var TICK = 0;
-var unitAmt = 0;
-var tickSpeed = st_spd * spdMult;
-var tickSpeedRounded = Math.round(tickSpeed);
-var st_spdTotal;
-var turnMargin = st_spdTotal / unitAmt;
-
-var speedSliders = document.getElementById("speedInputDiv");
-var unitCount = 0;
-function unitAmtSubmit(){
-    unitAmt = unitSliderInput;
-    console.log(unitAmt);
-    for (var q=0; q<unitAmt; q++){
-        unitCount++;
-        speedInputDiv.innerHTML += unitCount + "<input type='range' min='1' max='2000' value='1600' class='slider' id='slider_u1'><br>";
-    }
-    speedInputDiv.innerHTML += "<input type='submit' value='Submit Speedz' onclick='xxxx()' /><hr>"
-    //innerHTML friendly slider: <input type='range' min='1' max='2000' value='1600' class='slider' id='xxxxx'>
-    //innerHTML friendly btn: <input type='submit' value='xxxx' onclick='xxxx()' />
-}  
-//Slider shit  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-var sliderUnit = document.getElementById("slidey");
-var output = document.getElementById("amtOutput");
-var unitSliderInput; 
-output.innerHTML = sliderUnit.value;
-sliderUnit.oninput = function(){
-    output.innerHTML = this.value;
-    unitSliderInput = this.value;
-}
-</script>
-</body>
+</style>
 </html>

@@ -1,0 +1,121 @@
+<!DOCtype html><html><head><title>~spdSim ALT</title></head>
+<body>
+<div class="sliderContainer">
+    <input type="range" min="1" max="25" value="7" class="sliderUnitAmt" id="slidey">
+    <input type="submit" value="Submit" onclick="unitAmtSubmit()" />
+    | Unit Amt: <span id="amtOutput"></span>
+</div>
+
+<div id="speedInputDiv"><br></div>
+
+<script language="Javascript" type="text/javascript">//=================================
+console.log("/// " + toggleBtn);
+var sliderUnit = document.getElementById("slidey"); //slider id
+var outputUnit = document.getElementById("amtOutput"); //output id
+var unitSliderInput; 
+outputUnit.innerHTML = sliderUnit.value;
+sliderUnit.oninput = function(){
+    outputUnit.innerHTML = this.value;
+    unitSliderInput = this.value;  //get value in separate var for the loop nonsense
+}
+
+
+var unitAmt = 0;
+var unitCount = 0;
+var sliderValueDef = 30;
+var speedSliders = document.getElementById("speedInputDiv");
+
+function unitAmtSubmit(){
+    unitAmt = unitSliderInput;
+    console.log("Unit amount: " + unitAmt);
+
+    for (var q=0; q<unitAmt; q++){
+        unitCount++;
+        speedInputDiv.innerHTML += unitCount + "<input type='range' min='1' max='2000' value='" + sliderValueDef + "' class='slider' id='slider_u" 
+        + unitCount + "'><br><span id='output_u" + unitCount + "'></span><br>";
+        
+        sliderValueDef += 25;
+    }
+    var slider_uu1 = document.getElementById("slider_u1"); //container for slider
+    var sliderOutput_uu1 = document.getElementById("output_u1"); //container for span slider value
+    var slider_uu2 = document.getElementById("slider_u2");    
+    var sliderOutput_uu2 = document.getElementById("output_u2");
+
+    sliderOutput_uu1.innerHTML = "&nbsp; [" + slider_uu1.value + "]";
+    sliderOutput_uu2.innerHTML = "&nbsp; [" + slider_uu2.value + "]";
+    s1_container = slider_uu1.value;
+    s2_container = slider_uu2.value;
+
+    speedInputDiv.innerHTML += "<input type='submit' value='Submit Speedz' onclick='test()'><hr>";
+
+}
+    slider_uu1.oninput = function(){
+        sliderOutput_uu1.innerHTML = "&nbsp; [" + this.value + "]";
+        console.log(slider_uu1.value);
+    }
+    slider_uu2.oninput = function(){
+        sliderOutput_uu2.innerHTML = "&nbsp; [" + this.value + "]";
+        console.log(this.value);
+    }
+function test(){
+    sliderOutput_uu1.innerHTML = "[ &nbsp; &nbsp; &nbsp;" + this.value + "]";
+    sliderOutput_uu2.innerHTML = "[ &nbsp; &nbsp; &nbsp;" + this.value + "]";
+}
+//nothing below this point except css
+</script>
+</body>
+<style>
+    body {
+        background-color: #000000;
+        color:rgb(212, 243, 255)
+    }
+    table,    td {
+        border: 2px solid rgb(80, 80, 80);
+    }
+    thead,    tfoot {
+        background-color: rgb(15, 15, 15);
+        color: rgb(248, 210, 212);
+    }
+    .sliderContainer{
+        width: 100%;
+    }
+    .sliderUnitAmt{
+        -webkit-appearance: none;
+        width: 200px;
+        height: 15px;
+        background: rgb(109, 109, 109);
+        outline: none;
+        opacity: 0.6;
+        -webkit-transition: 0.2s;
+        transition: opacity 0.2s;
+    }
+    .slider{
+        -webkit-appearance: none;
+        width: 700px;
+        height: 10px;
+        background: rgb(125, 145, 158);
+        outline: none;
+        opacity: 0.6;
+        -webkit-transition: 0.2s;
+        transition: opacity 0.2s;
+    }
+    .sliderUnitAmt:hover{
+        opacity: 1;
+    }
+    .sliderUnitAmt::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 8px;
+        height: 15px;
+        background: #4262cc;
+        cursor: pointer;
+    }
+
+    .sliderUnitAmt::-moz-range-thumb {
+        width: 10px;
+        height: 15px;
+        background: #19429b;
+        cursor: pointer;
+    }
+</style>
+</html>
