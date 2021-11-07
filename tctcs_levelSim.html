@@ -4,13 +4,13 @@ var st_hp = 0; var st_mp = 0; var st_atk = 0; var st_def = 0; var st_mag = 0; va
 var mpGainMult = 0.04;
 var mpGainStartMult = 0.06;
 //------------------------------------------------------------------------------
-    var job_martialArtist = [93,42,77,60,46,46,60]; var bonusAmt_martialArtist = 6;
+    var job_martialArtist = [115,42,77,60,46,46,60]; var bonusAmt_martialArtist = 6;
 var rawGain_martialArtist = [7,1,4,1,2,0,3]; 
 var bCh_martialArtist = [20	,	30	,	45	,	55	,	80	,	90	,	100];
-    var job_gladiator = [88,27,116,66,24,31,48]; var bonusAmt_gladiator = 6;
+    var job_gladiator = [88,27,116,66,24,31,49]; var bonusAmt_gladiator = 6;
 var rawGain_gladiator = [5,1,6,4,0,1,2]; 
 var bCh_gladiator = [10	,	20	,	40	,	45	,	75	,	80	,	100];
-    var job_paladin = [121,30,80,125,42,34,43]; var bonusAmt_paladin = 5;
+    var job_paladin = [121,30,80,125,42,34,45]; var bonusAmt_paladin = 5;
 var rawGain_paladin = [4,2,2,6,2,1,2]; 
 var bCh_paladin = [20	,	25	,	50	,	70	,	75	,	80	,	100];
     var job_ninja = [68,64,61,52,66,82,94]; var bonusAmt_ninja = 6;
@@ -35,7 +35,7 @@ var bCh_deadSoldier = [15	,	20	,	35	,	45	,	70	,	80	,	100];
     var job_runeKnight = [90,45,84,65,79,68,53]; var bonusAmt_runeKnight = 6;
 var rawGain_runeKnight = [5,2,3,3,2,1,3]; 
 var bCh_runeKnight = [15	,	25	,	40	,	45	,	70	,	85	,	100];
-    var job_temporalKnight = [86,52,92,52,48,48,67]; var bonusAmt_temporalKnight = 7;
+    var job_temporalKnight = [86,52,100,52,48,48,67]; var bonusAmt_temporalKnight = 7;
 var rawGain_temporalKnight = [5,2,5,1,1,1,3]; 
 var bCh_temporalKnight = [5	,	15	,	35	,	55	,	75	,	85	,	100];
 
@@ -48,7 +48,7 @@ var bCh_hunter = [10	,	15	,	35	,	40	,	55	,	70	,	100];
     var job_sharpshooter = [69,47,84,65,60,58,60]; var bonusAmt_sharpshooter = 6;
 var rawGain_sharpshooter = [4,3,3,1,2,2,3]; 
 var bCh_sharpshooter = [10	,	15	,	40	,	60	,	75	,	90	,	100];
-    var job_sniper = [79,35,79,48,41,63,57]; var bonusAmt_sniper = 3;
+    var job_sniper = [79,35,79,48,46,63,57]; var bonusAmt_sniper = 3;
 var rawGain_sniper = [4,3,5,1,2,3,3]; 
 var bCh_sniper = [20	,	40	,	45	,	60	,	80	,	90	,	100];
     var job_crystalRanger = [53,50,48,77,50,68,76]; var bonusAmt_crystalRanger = 5;
@@ -78,30 +78,30 @@ var bCh_engineer = [10	,	25	,	35	,	50	,	70	,	80	,	100];
     var job_summoner = [80,110,49,58,65,84,53]; var bonusAmt_summoner = 6;
 var rawGain_summoner = [1,7,2,1,3,3,2]; 
 var bCh_summoner = [25	,	35	,	40	,	50	,	65	,	80	,	100];
-    var job_sorceror = [57,90,25,42,116,72,43]; var bonusAmt_sorceror = 6;
+    var job_sorceror = [57,90,25,42,116,72,47]; var bonusAmt_sorceror = 6;
 var rawGain_sorceror = [2,5,1,1,6,2,2]; 
 var bCh_sorceror = [25	,	30	,	45	,	55	,	75	,	80	,	100];
     var job_oracle = [74,90,30,58,72,124,56]; var bonusAmt_oracle = 4;
 var rawGain_oracle = [3,4,1,1,2,7,3]; 
 var bCh_oracle = [15	,	25	,	45	,	60	,	90	,	95	,	100];
 
-    var job_mage = [61,70,41,54,75,73,56]; var bonusAmt_mage = 5;
+    var job_mage = [61,72,41,54,75,73,58]; var bonusAmt_mage = 5;
 var rawGain_mage = [3,4,1,2,4,3,2]; 
 var bCh_mage = [15	,	25	,	45	,	50	,	55	,	70	,	100];
-    var job_archMage = [66,79,38,55,88,78,58]; var bonusAmt_archMage = 6;
+    var job_archMage = [66,79,38,55,88,78,59]; var bonusAmt_archMage = 6;
 var rawGain_archMage = [3,4,1,1,4,3,2]; 
 var bCh_archMage = [15	,	25	,	40	,	55	,	70	,	75	,	100];
     var job_chaosMage = [81,20,54,64,87,60,53]; var bonusAmt_chaosMage = 6;
 var rawGain_chaosMage = [5,2,2,1,4,1,3]; 
 var bCh_chaosMage = [10	,	20	,	25	,	40	,	65	,	85	,	100];
-    var job_seer = [63,96,37,51,95,98,60]; var bonusAmt_seer = 7;
+    var job_seer = [63,97,37,51,101,98,60]; var bonusAmt_seer = 7;
 var rawGain_seer = [3,3,1,2,4,2,2]; 
 var bCh_seer = [10	,	20	,	35	,	45	,	70	,	85	,	100];
     var job_frostmancer = [70,99,41,59,78,80,72]; var bonusAmt_frostmancer = 6;
 var rawGain_frostmancer = [3,4,1,2,4,2,3]; 
 var bCh_frostmancer = [15	,	25	,	45	,	50	,	80	,	90	,	100];
 
-    var job_elementalist = [80,87,48,67,75,88,76]; var bonusAmt_elementalist = 5;
+    var job_elementalist = [78,87,48,61,75,88,76]; var bonusAmt_elementalist = 5;
 var rawGain_elementalist = [2,5,1,1,4,4,2]; 
 var bCh_elementalist = [25	,	35	,	55	,	65	,	70	,	75	,	100];
     var job_priest = [54,81,24,52,81,91,62]; var bonusAmt_priest = 3;
@@ -141,420 +141,340 @@ var bCh_ = [];
 //------------------------------------------------------------------------------------------
 var mageCheck = false;    var job; 
 
-function setKnight(){
-    job = "jobKnight";    mageCheck = false;    jobReset();    console.log("Job: Knight");
-}
 function setMage(){
     job = "jobMage";    mageCheck = true;    jobReset();    console.log("Job: Mage");
 }
-function setAlchemist(){
-    job = "jobAlchemist";    mageCheck = false;    jobReset();    console.log("Job: Alchemist");
-}
-function setArcher(){
-    job = "jobArcher";    mageCheck = false;    jobReset();    console.log("Job: Archer");
-}
-function setBandit(){
-    job = "jobBandit";    mageCheck = false;    jobReset();    console.log("Job: Bandit");
-}
-function setBard(){
-    job = "jobBard";    mageCheck = false; jobReset();    console.log("Job: Bard");
-}
-function setCrystalRanger(){
-    job = "jobCrystalRanger";    mageCheck = false;    jobReset();    console.log("Job: Crystal Ranger");
-}
-function setDeadSoldier(){
-    job = "jobDeadSoldier";    mageCheck = false;    jobReset();    console.log("Job: Dead Soldier");
-}
-function setEngineer(){
-    job = "jobEngineer";    mageCheck = false;    jobReset();    console.log("Job: Engineer");
-}
-function setGladiator(){
-    job = "jobGladiator";    mageCheck = false;    jobReset();    console.log("Job: Gladiator");
-}
-function setHunter(){
-    job = "jobHunter";    mageCheck = false;    jobReset();    console.log("Job: Hunter");    
-}
-function setMartialArtist(){
-    job = "jobMartialArtist";    mageCheck = false;    jobReset();    console.log("Job: Martial Artist");
-}
-function setNinja(){
-    job = "jobNinja";    mageCheck = false;    jobReset();    console.log("Job: Ninja");
-}
-function setPaladin(){
-    job = "jobPaladin";    mageCheck = false;    jobReset();    console.log("Job: Paladin");
-}
-function setPhantomRogue(){
-    job = "jobPhantomRogue";    mageCheck = false;    jobReset();    console.log("Job: Phantom Rogue");
-}
-function setRuneKnight(){
-    job = "jobRuneKnight";    mageCheck = false;    jobReset();    console.log("Job: Rune Knight");
-}
-function setSaboteur(){
-    job = "jobSaboteur";    mageCheck = false;    jobReset();    console.log("Job: Saboteur");
-}
-function setSamurai(){
-    job = "jobSamurai";    mageCheck = false;    jobReset();    console.log("Job: Samurai");
-}
-function setSentinel(){
-    job = "jobSentinel";    mageCheck = false;    jobReset();    console.log("Job: Sentinel");
-}
-function setSharpshooter(){
-    job = "jobSharpshooter";    mageCheck = false;    jobReset();    console.log("Job: Sharpshooter");
-}
-function setSniper(){
-    job = "jobSniper";    mageCheck = false;    jobReset();    console.log("Job: Sniper");
-}
-function setSpiritLancer(){
-    job = "jobSpiritLancer";    mageCheck = false;    jobReset();    console.log("Job: Spirit Lancer");
-}
-function setTemporalKnight(){
-    job = "jobTemporalKnight";    mageCheck = false;    jobReset();    console.log("Job: Temporal Knight");
-}
-function setArchMage(){
-    job = "jobArchMage";    mageCheck = true;    jobReset();    console.log("Job: Arch Mage");
-}
-function setChaosMage(){
-    job = "jobChaosMage";    mageCheck = true;    jobReset();    console.log("Job: Chaos Mage");
-}
-function setElementalist(){
-    job = "jobElementalist";    mageCheck = true;    jobReset();    console.log("Job: Elementalist");
-}
-function setEnchanter(){
-    job = "jobEnchanter";    mageCheck = true;    jobReset();    console.log("Job: Enchanter");
-}
-function setEonMage(){
-    job = "jobEonMage";    mageCheck = true;    jobReset();    console.log("Job: Eon Mage");
-}
-function setFrostmancer(){
-    job = "jobFrostmancer";    mageCheck = true;    jobReset();    console.log("Job: Frostmancer");
-}
-function setGunMage(){
-    job = "jobGunMage";    mageCheck = true;    jobReset();    console.log("Job: Gun Mage");
-}
-function setIllusionist(){
-    job = "jobIllusionist";    mageCheck = true;    jobReset();    console.log("Job: Illusionist");
-}
-function setNecromancer(){
-    job = "jobNecromancer";    mageCheck = true;    jobReset();    console.log("Job: Necromancer");
-}
-function setOracle(){
-    job = "jobOracle";    mageCheck = true;    jobReset();    console.log("Job: Oracle");
-}
-function setPriest(){
-    job = "jobPriest";    mageCheck = true;    jobReset();    console.log("Job: Priest");
-}
-function setSeer(){
-    job = "jobSeer";    mageCheck = true;    jobReset();    console.log("Job: Seer");
-}
-function setSorceror(){
-    job = "jobSorceror";    mageCheck = true;    jobReset();    console.log("Job: Sorceror");
-}
-function setStarBlaster(){
-    job = "jobStarBlaster";    mageCheck = true;    jobReset();    console.log("Job: Star Blaster");
-}
-function setStormDruid(){
-    job = "jobStormDruid";    mageCheck = true;    jobReset();    console.log("Job: Storm Druid");
-}
-function setSummoner(){
-    job = "jobSummoner";    mageCheck = true;    jobReset();    console.log("Job: Summoner");
-}
-function setWitchDoctor(){
-    job = "jobWitchDoctor";    mageCheck = true;    jobReset();    console.log("Job: Witch Doctor");
-}
+function setKnight(){    job = "jobKnight";    mageCheck = false;    jobReset();    console.log("Job: Knight");    }
+function setAlchemist(){    job = "jobAlchemist";    mageCheck = false;    jobReset();    console.log("Job: Alchemist");    }
+function setArcher(){    job = "jobArcher";    mageCheck = false;    jobReset();    console.log("Job: Archer");    }
+function setBandit(){    job = "jobBandit";    mageCheck = false;    jobReset();    console.log("Job: Bandit");    }
+function setBard(){    job = "jobBard";    mageCheck = false; jobReset();    console.log("Job: Bard");    }
+function setCrystalRanger(){    job = "jobCrystalRanger";    mageCheck = false;    jobReset();    console.log("Job: Crystal Ranger");    }
+function setDeadSoldier(){    job = "jobDeadSoldier";    mageCheck = false;    jobReset();    console.log("Job: Dead Soldier");    }
+function setEngineer(){    job = "jobEngineer";    mageCheck = false;    jobReset();    console.log("Job: Engineer");    }
+function setGladiator(){    job = "jobGladiator";    mageCheck = false;    jobReset();    console.log("Job: Gladiator");    }
+function setHunter(){    job = "jobHunter";    mageCheck = false;    jobReset();    console.log("Job: Hunter");    }
+function setMartialArtist(){    job = "jobMartialArtist";    mageCheck = false;    jobReset();    console.log("Job: Martial Artist");    }
+function setNinja(){    job = "jobNinja";    mageCheck = false;    jobReset();    console.log("Job: Ninja");    }
+function setPaladin(){    job = "jobPaladin";    mageCheck = false;    jobReset();    console.log("Job: Paladin");    }
+function setPhantomRogue(){    job = "jobPhantomRogue";    mageCheck = false;    jobReset();    console.log("Job: Phantom Rogue");    }
+function setRuneKnight(){    job = "jobRuneKnight";    mageCheck = false;    jobReset();    console.log("Job: Rune Knight");    }
+function setSaboteur(){    job = "jobSaboteur";    mageCheck = false;    jobReset();    console.log("Job: Saboteur");    }
+function setSamurai(){    job = "jobSamurai";    mageCheck = false;    jobReset();    console.log("Job: Samurai");    }
+function setSentinel(){    job = "jobSentinel";    mageCheck = false;    jobReset();    console.log("Job: Sentinel");    }
+function setSharpshooter(){    job = "jobSharpshooter";    mageCheck = false;    jobReset();    console.log("Job: Sharpshooter");    }
+function setSniper(){    job = "jobSniper";    mageCheck = false;    jobReset();    console.log("Job: Sniper");    }
+function setSpiritLancer(){    job = "jobSpiritLancer";    mageCheck = false;    jobReset();    console.log("Job: Spirit Lancer");    }
+function setTemporalKnight(){    job = "jobTemporalKnight";    mageCheck = false;    jobReset();    console.log("Job: Temporal Knight");    }
+function setArchMage(){    job = "jobArchMage";    mageCheck = true;    jobReset();    console.log("Job: Arch Mage");    }
+function setChaosMage(){    job = "jobChaosMage";    mageCheck = true;    jobReset();    console.log("Job: Chaos Mage");    }
+function setElementalist(){    job = "jobElementalist";    mageCheck = true;    jobReset();    console.log("Job: Elementalist");    }
+function setEnchanter(){    job = "jobEnchanter";    mageCheck = true;    jobReset();    console.log("Job: Enchanter");    }
+function setEonMage(){    job = "jobEonMage";    mageCheck = true;    jobReset();    console.log("Job: Eon Mage");    }
+function setFrostmancer(){    job = "jobFrostmancer";    mageCheck = true;    jobReset();    console.log("Job: Frostmancer");    }
+function setGunMage(){    job = "jobGunMage";    mageCheck = true;    jobReset();    console.log("Job: Gun Mage");    }
+function setIllusionist(){    job = "jobIllusionist";    mageCheck = true;    jobReset();    console.log("Job: Illusionist");    }
+function setNecromancer(){    job = "jobNecromancer";    mageCheck = true;    jobReset();    console.log("Job: Necromancer");    }
+function setOracle(){    job = "jobOracle";    mageCheck = true;    jobReset();    console.log("Job: Oracle");    }
+function setPriest(){    job = "jobPriest";    mageCheck = true;    jobReset();    console.log("Job: Priest");    }
+function setSeer(){    job = "jobSeer";    mageCheck = true;    jobReset();    console.log("Job: Seer");    }
+function setSorceror(){    job = "jobSorceror";    mageCheck = true;    jobReset();    console.log("Job: Sorceror");    }
+function setStarBlaster(){    job = "jobStarBlaster";    mageCheck = true;    jobReset();    console.log("Job: Star Blaster");    }
+function setStormDruid(){    job = "jobStormDruid";    mageCheck = true;    jobReset();    console.log("Job: Storm Druid");    }
+function setSummoner(){    job = "jobSummoner";    mageCheck = true;    jobReset();    console.log("Job: Summoner");    }
+function setWitchDoctor(){    job = "jobWitchDoctor";    mageCheck = true;    jobReset();    console.log("Job: Witch Doctor");    }
 function jobReset(){
     levelCount = 1;
     rowSelect = 1;
     writeHTML();
 }
-function set(){
-    job = "job";    mageCheck = true;    jobReset();    console.log("Job: ");
-}
+function set(){    job = "job";    mageCheck = true;    jobReset();    console.log("Job: ");    }
 
 //=====================================================================================================
 
 var jobSelect = "x";
 function writeHTML(){
     var jobDisplay = document.getElementById('jobName'); var lvDisplay1 = document.getElementById('lvDisplay');
-        if (job == "jobMage"){ //set base stats
-            st_hp = job_mage[0]; st_mp = job_mage[1];
-            st_atk = job_mage[2]; st_def = job_mage[3];
-            st_mag = job_mage[4]; st_res = job_mage[5];
-            st_spd = job_mage[6];
-            jobSelect = "Mage";            tb_write();
-        }
-        else if (job == "jobKnight"){
-            st_hp = job_knight[0]; st_mp = job_knight[1];
-            st_atk = job_knight[2]; st_def = job_knight[3];
-            st_mag = job_knight[4]; st_res = job_knight[5];
-            st_spd = job_knight[6];
-            jobSelect = "Knight";            tb_write();
-        }
-        else if (job == "jobArcher"){
-            st_hp = job_archer[0]; st_mp = job_archer[1];
-            st_atk = job_archer[2]; st_def = job_archer[3];
-            st_mag = job_archer[4]; st_res = job_archer[5];
-            st_spd = job_archer[6];
-            jobSelect = "Archer";            tb_write();
-        }
-        else if (job == "jobAlchemist"){
-            st_hp = job_alchemist[0]; st_mp = job_alchemist[1];
-            st_atk = job_alchemist[2]; st_def = job_alchemist[3];
-            st_mag = job_alchemist[4]; st_res = job_alchemist[5];
-            st_spd = job_alchemist[6];
-            jobSelect = "Alchemist";            tb_write();
-        }
-        else if (job == "jobBandit"){
-            st_hp = job_bandit[0]; st_mp = job_bandit[1];
-            st_atk = job_bandit[2]; st_def = job_bandit[3];
-            st_mag = job_bandit[4]; st_res = job_bandit[5];
-            st_spd = job_bandit[6];
-            jobSelect = "Bandit";       tb_write();
-        }
-        else if (job == "jobBard"){
-            st_hp = job_bard[0]; st_mp = job_bard[1];
-            st_atk = job_bard[2]; st_def = job_bard[3];
-            st_mag = job_bard[4]; st_res = job_bard[5];
-            st_spd = job_bard[6];
-            jobSelect = "Bard";            tb_write();
-        }
-        else if (job == "jobCrystalRanger"){
-            st_hp = job_crystalRanger[0]; st_mp = job_crystalRanger[1];
-            st_atk = job_crystalRanger[2]; st_def = job_crystalRanger[3];
-            st_mag = job_crystalRanger[4]; st_res = job_crystalRanger[5];
-            st_spd = job_crystalRanger[6];
-            jobSelect = "Crystal Ranger";            tb_write();
-        }
-        else if (job == "jobDeadSoldier"){
-            st_hp = job_deadSoldier[0]; st_mp = job_deadSoldier[1];
-            st_atk = job_deadSoldier[2]; st_def = job_deadSoldier[3];
-            st_mag = job_deadSoldier[4]; st_res = job_deadSoldier[5];
-            st_spd = job_deadSoldier[6];
-            jobSelect = "Dead Soldier";            tb_write();
-        }
-        else if (job == "jobEngineer"){
-            st_hp = job_engineer[0]; st_mp = job_engineer[1];
-            st_atk = job_engineer[2]; st_def = job_engineer[3];
-            st_mag = job_engineer[4]; st_res = job_engineer[5];
-            st_spd = job_engineer[6];
-            jobSelect = "Engineer";            tb_write();
-        }
-        else if (job == "jobGladiator"){
-            st_hp = job_gladiator[0]; st_mp = job_gladiator[1];
-            st_atk = job_gladiator[2]; st_def = job_gladiator[3];
-            st_mag = job_gladiator[4]; st_res = job_gladiator[5];
-            st_spd = job_gladiator[6];
-            jobSelect = "Gladiator";            tb_write();
-        }
-        else if (job == "jobHunter"){
-            st_hp = job_hunter[0]; st_mp = job_hunter[1];
-            st_atk = job_hunter[2]; st_def = job_hunter[3];
-            st_mag = job_hunter[4]; st_res = job_hunter[5];
-            st_spd = job_hunter[6];
-            jobSelect = "Hunter";            tb_write();
-        }
-        else if (job == "jobMartialArtist"){
-            st_hp = job_martialArtist[0]; st_mp = job_martialArtist[1];
-            st_atk = job_martialArtist[2]; st_def = job_martialArtist[3];
-            st_mag = job_martialArtist[4]; st_res = job_martialArtist[5];
-            st_spd = job_martialArtist[6];
-            jobSelect = "MartialArtist";            tb_write();
-        }
-        else if (job == "jobNinja"){
-            st_hp = job_ninja[0]; st_mp = job_ninja[1];
-            st_atk = job_ninja[2]; st_def = job_ninja[3];
-            st_mag = job_ninja[4]; st_res = job_ninja[5];
-            st_spd = job_ninja[6];
-            jobSelect = "Ninja";            tb_write();
-        }
-        else if (job == "jobPaladin"){
-            st_hp = job_paladin[0]; st_mp = job_paladin[1];
-            st_atk = job_paladin[2]; st_def = job_paladin[3];
-            st_mag = job_paladin[4]; st_res = job_paladin[5];
-            st_spd = job_paladin[6];
-            jobSelect = "Paladin";            tb_write();
-        }
-        else if (job == "jobRuneKnight"){
-            st_hp = job_runeKnight[0]; st_mp = job_runeKnight[1];
-            st_atk = job_runeKnight[2]; st_def = job_runeKnight[3];
-            st_mag = job_runeKnight[4]; st_res = job_runeKnight[5];
-            st_spd = job_runeKnight[6];
-            jobSelect = "RuneKnight";            tb_write();
-        }
-        else if (job == "jobSaboteur"){
-            st_hp = job_saboteur[0]; st_mp = job_saboteur[1];
-            st_atk = job_saboteur[2]; st_def = job_saboteur[3];
-            st_mag = job_saboteur[4]; st_res = job_saboteur[5];
-            st_spd = job_saboteur[6];
-            jobSelect = "Saboteur";            tb_write();
-        }
-        else if (job == "jobSamurai"){
-            st_hp = job_samurai[0]; st_mp = job_samurai[1];
-            st_atk = job_samurai[2]; st_def = job_samurai[3];
-            st_mag = job_samurai[4]; st_res = job_samurai[5];
-            st_spd = job_samurai[6];
-            jobSelect = "Samurai";            tb_write();
-        }
-        else if (job == "jobSentinel"){
-            st_hp = job_sentinel[0]; st_mp = job_sentinel[1];
-            st_atk = job_sentinel[2]; st_def = job_sentinel[3];
-            st_mag = job_sentinel[4]; st_res = job_sentinel[5];
-            st_spd = job_sentinel[6];
-            jobSelect = "Sentinel";            tb_write();
-        }
-        else if (job == "jobPhantomRogue"){
-            st_hp = job_phantomRogue[0]; st_mp = job_phantomRogue[1];
-            st_atk = job_phantomRogue[2]; st_def = job_phantomRogue[3];
-            st_mag = job_phantomRogue[4]; st_res = job_phantomRogue[5];
-            st_spd = job_phantomRogue[6];
-            jobSelect = "Phantom Rogue";            tb_write();
-        }
-        else if (job == "jobSharpshooter"){
-            st_hp = job_sharpshooter[0]; st_mp = job_sharpshooter[1];
-            st_atk = job_sharpshooter[2]; st_def = job_sharpshooter[3];
-            st_mag = job_sharpshooter[4]; st_res = job_sharpshooter[5];
-            st_spd = job_sharpshooter[6];
-            jobSelect = "Sharpshooter";            tb_write();
-        }
-        else if (job == "jobSniper"){
-            st_hp = job_sniper[0]; st_mp = job_sniper[1];
-            st_atk = job_sniper[2]; st_def = job_sniper[3];
-            st_mag = job_sniper[4]; st_res = job_sniper[5];
-            st_spd = job_sniper[6];
-            jobSelect = "Sniper";            tb_write();
-        }
-        else if (job == "jobSpiritLancer"){
-            st_hp = job_spiritLancer[0]; st_mp = job_spiritLancer[1];
-            st_atk = job_spiritLancer[2]; st_def = job_spiritLancer[3];
-            st_mag = job_spiritLancer[4]; st_res = job_spiritLancer[5];
-            st_spd = job_spiritLancer[6];
-            jobSelect = "Spirit Lancer";            tb_write();
-        }
-        else if (job == "jobTemporalKnight"){
-            st_hp = job_temporalKnight[0]; st_mp = job_temporalKnight[1];
-            st_atk = job_temporalKnight[2]; st_def = job_temporalKnight[3];
-            st_mag = job_temporalKnight[4]; st_res = job_temporalKnight[5];
-            st_spd = job_temporalKnight[6];
-            jobSelect = "Temporal Knight";            tb_write();
-        }
-        else if (job == "jobArchMage"){
-            st_hp = job_archMage[0]; st_mp = job_archMage[1];
-            st_atk = job_archMage[2]; st_def = job_archMage[3];
-            st_mag = job_archMage[4]; st_res = job_archMage[5];
-            st_spd = job_archMage[6];
-            jobSelect = "ArchMage";            tb_write();
-        }
-        else if (job == "jobChaosMage"){
-            st_hp = job_chaosMage[0]; st_mp = job_chaosMage[1];
-            st_atk = job_chaosMage[2]; st_def = job_chaosMage[3];
-            st_mag = job_chaosMage[4]; st_res = job_chaosMage[5];
-            st_spd = job_chaosMage[6];
-            jobSelect = "Chaos Mage";            tb_write();
-        }
-        else if (job == "jobElementalist"){
-            st_hp = job_elementalist[0]; st_mp = job_elementalist[1];
-            st_atk = job_elementalist[2]; st_def = job_elementalist[3];
-            st_mag = job_elementalist[4]; st_res = job_elementalist[5];
-            st_spd = job_elementalist[6];
-            jobSelect = "Elementalist";            tb_write();
-        }
-        else if (job == "jobEnchanter"){
-            st_hp = job_enchanter[0]; st_mp = job_enchanter[1];
-            st_atk = job_enchanter[2]; st_def = job_enchanter[3];
-            st_mag = job_enchanter[4]; st_res = job_enchanter[5];
-            st_spd = job_enchanter[6];
-            jobSelect = "Enchanter";            tb_write();
-        }
-        else if (job == "jobEonMage"){
-            st_hp = job_eonMage[0]; st_mp = job_eonMage[1];
-            st_atk = job_eonMage[2]; st_def = job_eonMage[3];
-            st_mag = job_eonMage[4]; st_res = job_eonMage[5];
-            st_spd = job_eonMage[6];
-            jobSelect = "Eon Mage";            tb_write();
-        }
-        else if (job == "jobFrostmancer"){
-            st_hp = job_frostmancer[0]; st_mp = job_frostmancer[1];
-            st_atk = job_frostmancer[2]; st_def = job_frostmancer[3];
-            st_mag = job_frostmancer[4]; st_res = job_frostmancer[5];
-            st_spd = job_frostmancer[6];
-            jobSelect = "Frostmancer";            tb_write();
-        }
-        else if (job == "jobGunMage"){
-            st_hp = job_gunMage[0]; st_mp = job_gunMage[1];
-            st_atk = job_gunMage[2]; st_def = job_gunMage[3];
-            st_mag = job_gunMage[4]; st_res = job_gunMage[5];
-            st_spd = job_gunMage[6];
-            jobSelect = "Gun Mage";            tb_write();
-        }
-        else if (job == "jobIllusionist"){
-            st_hp = job_illusionist[0]; st_mp = job_illusionist[1];
-            st_atk = job_illusionist[2]; st_def = job_illusionist[3];
-            st_mag = job_illusionist[4]; st_res = job_illusionist[5];
-            st_spd = job_illusionist[6];
-            jobSelect = "Illusionist";            tb_write();
-        }
-        else if (job == "jobNecromancer"){
-            st_hp = job_necromancer[0]; st_mp = job_necromancer[1];
-            st_atk = job_necromancer[2]; st_def = job_necromancer[3];
-            st_mag = job_necromancer[4]; st_res = job_necromancer[5];
-            st_spd = job_necromancer[6];
-            jobSelect = "Necromancer";            tb_write();
-        }
-        else if (job == "jobOracle"){
-            st_hp = job_oracle[0]; st_mp = job_oracle[1];
-            st_atk = job_oracle[2]; st_def = job_oracle[3];
-            st_mag = job_oracle[4]; st_res = job_oracle[5];
-            st_spd = job_oracle[6];
-            jobSelect = "Oracle";            tb_write();
-        }
-        else if (job == "jobPriest"){
-            st_hp = job_priest[0]; st_mp = job_priest[1];
-            st_atk = job_priest[2]; st_def = job_priest[3];
-            st_mag = job_priest[4]; st_res = job_priest[5];
-            st_spd = job_priest[6];
-            jobSelect = "Priest";            tb_write();
-        }
-        else if (job == "jobSeer"){
-            st_hp = job_seer[0]; st_mp = job_seer[1];
-            st_atk = job_seer[2]; st_def = job_seer[3];
-            st_mag = job_seer[4]; st_res = job_seer[5];
-            st_spd = job_seer[6];
-            jobSelect = "Seer";            tb_write();
-        }
-        else if (job == "jobStormDruid"){
-            st_hp = job_stormDruid[0]; st_mp = job_stormDruid[1];
-            st_atk = job_stormDruid[2]; st_def = job_stormDruid[3];
-            st_mag = job_stormDruid[4]; st_res = job_stormDruid[5];
-            st_spd = job_stormDruid[6];
-            jobSelect = "Storm Druid";            tb_write();
-        }
-        else if (job == "jobSorceror"){
-            st_hp = job_sorceror[0]; st_mp = job_sorceror[1];
-            st_atk = job_sorceror[2]; st_def = job_sorceror[3];
-            st_mag = job_sorceror[4]; st_res = job_sorceror[5];
-            st_spd = job_sorceror[6];
-            jobSelect = "Sorceror";            tb_write();
-        }
-        else if (job == "jobStarBlaster"){
-            st_hp = job_starBlaster[0]; st_mp = job_starBlaster[1];
-            st_atk = job_starBlaster[2]; st_def = job_starBlaster[3];
-            st_mag = job_starBlaster[4]; st_res = job_starBlaster[5];
-            st_spd = job_starBlaster[6];
-            jobSelect = "Star Blaster";            tb_write();
-        }
-        else if (job == "jobSummoner"){
-            st_hp = job_summoner[0]; st_mp = job_summoner[1];
-            st_atk = job_summoner[2]; st_def = job_summoner[3];
-            st_mag = job_summoner[4]; st_res = job_summoner[5];
-            st_spd = job_summoner[6];
-            jobSelect = "Summoner";            tb_write();
-        }
-        else if (job == "jobWitchDoctor"){
-            st_hp = job_witchDoctor[0]; st_mp = job_witchDoctor[1];
-            st_atk = job_witchDoctor[2]; st_def = job_witchDoctor[3];
-            st_mag = job_witchDoctor[4]; st_res = job_witchDoctor[5];
-            st_spd = job_witchDoctor[6];
-            jobSelect = "WitchDoctor";            tb_write();
-        }
+    if (job == "jobMage"){ //set base stats
+        st_hp = job_mage[0]; st_mp = job_mage[1];
+        st_atk = job_mage[2]; st_def = job_mage[3];
+        st_mag = job_mage[4]; st_res = job_mage[5];
+        st_spd = job_mage[6];
+        jobSelect = "Mage";            tb_write();
+    }
+    else if (job == "jobKnight"){
+        st_hp = job_knight[0]; st_mp = job_knight[1];
+        st_atk = job_knight[2]; st_def = job_knight[3];
+        st_mag = job_knight[4]; st_res = job_knight[5];
+        st_spd = job_knight[6];
+        jobSelect = "Knight";            tb_write();
+    }
+    else if (job == "jobArcher"){
+        st_hp = job_archer[0]; st_mp = job_archer[1];
+        st_atk = job_archer[2]; st_def = job_archer[3];
+        st_mag = job_archer[4]; st_res = job_archer[5];
+        st_spd = job_archer[6];
+        jobSelect = "Archer";            tb_write();
+    }
+    else if (job == "jobAlchemist"){
+        st_hp = job_alchemist[0]; st_mp = job_alchemist[1];
+        st_atk = job_alchemist[2]; st_def = job_alchemist[3];
+        st_mag = job_alchemist[4]; st_res = job_alchemist[5];
+        st_spd = job_alchemist[6];
+        jobSelect = "Alchemist";            tb_write();
+    }
+    else if (job == "jobBandit"){
+        st_hp = job_bandit[0]; st_mp = job_bandit[1];
+        st_atk = job_bandit[2]; st_def = job_bandit[3];
+        st_mag = job_bandit[4]; st_res = job_bandit[5];
+        st_spd = job_bandit[6];
+        jobSelect = "Bandit";       tb_write();
+    }
+    else if (job == "jobBard"){
+        st_hp = job_bard[0]; st_mp = job_bard[1];
+        st_atk = job_bard[2]; st_def = job_bard[3];
+        st_mag = job_bard[4]; st_res = job_bard[5];
+        st_spd = job_bard[6];
+        jobSelect = "Bard";            tb_write();
+    }
+    else if (job == "jobCrystalRanger"){
+        st_hp = job_crystalRanger[0]; st_mp = job_crystalRanger[1];
+        st_atk = job_crystalRanger[2]; st_def = job_crystalRanger[3];
+        st_mag = job_crystalRanger[4]; st_res = job_crystalRanger[5];
+        st_spd = job_crystalRanger[6];
+        jobSelect = "Crystal Ranger";            tb_write();
+    }
+    else if (job == "jobDeadSoldier"){
+        st_hp = job_deadSoldier[0]; st_mp = job_deadSoldier[1];
+        st_atk = job_deadSoldier[2]; st_def = job_deadSoldier[3];
+        st_mag = job_deadSoldier[4]; st_res = job_deadSoldier[5];
+        st_spd = job_deadSoldier[6];
+        jobSelect = "Dead Soldier";            tb_write();
+    }
+    else if (job == "jobEngineer"){
+        st_hp = job_engineer[0]; st_mp = job_engineer[1];
+        st_atk = job_engineer[2]; st_def = job_engineer[3];
+        st_mag = job_engineer[4]; st_res = job_engineer[5];
+        st_spd = job_engineer[6];
+        jobSelect = "Engineer";            tb_write();
+    }
+    else if (job == "jobGladiator"){
+        st_hp = job_gladiator[0]; st_mp = job_gladiator[1];
+        st_atk = job_gladiator[2]; st_def = job_gladiator[3];
+        st_mag = job_gladiator[4]; st_res = job_gladiator[5];
+        st_spd = job_gladiator[6];
+        jobSelect = "Gladiator";            tb_write();
+    }
+    else if (job == "jobHunter"){
+        st_hp = job_hunter[0]; st_mp = job_hunter[1];
+        st_atk = job_hunter[2]; st_def = job_hunter[3];
+        st_mag = job_hunter[4]; st_res = job_hunter[5];
+        st_spd = job_hunter[6];
+        jobSelect = "Hunter";            tb_write();
+    }
+    else if (job == "jobMartialArtist"){
+        st_hp = job_martialArtist[0]; st_mp = job_martialArtist[1];
+        st_atk = job_martialArtist[2]; st_def = job_martialArtist[3];
+        st_mag = job_martialArtist[4]; st_res = job_martialArtist[5];
+        st_spd = job_martialArtist[6];
+        jobSelect = "MartialArtist";            tb_write();
+    }
+    else if (job == "jobNinja"){
+        st_hp = job_ninja[0]; st_mp = job_ninja[1];
+        st_atk = job_ninja[2]; st_def = job_ninja[3];
+        st_mag = job_ninja[4]; st_res = job_ninja[5];
+        st_spd = job_ninja[6];
+        jobSelect = "Ninja";            tb_write();
+    }
+    else if (job == "jobPaladin"){
+        st_hp = job_paladin[0]; st_mp = job_paladin[1];
+        st_atk = job_paladin[2]; st_def = job_paladin[3];
+        st_mag = job_paladin[4]; st_res = job_paladin[5];
+        st_spd = job_paladin[6];
+        jobSelect = "Paladin";            tb_write();
+    }
+    else if (job == "jobRuneKnight"){
+        st_hp = job_runeKnight[0]; st_mp = job_runeKnight[1];
+        st_atk = job_runeKnight[2]; st_def = job_runeKnight[3];
+        st_mag = job_runeKnight[4]; st_res = job_runeKnight[5];
+        st_spd = job_runeKnight[6];
+        jobSelect = "RuneKnight";            tb_write();
+    }
+    else if (job == "jobSaboteur"){
+        st_hp = job_saboteur[0]; st_mp = job_saboteur[1];
+        st_atk = job_saboteur[2]; st_def = job_saboteur[3];
+        st_mag = job_saboteur[4]; st_res = job_saboteur[5];
+        st_spd = job_saboteur[6];
+        jobSelect = "Saboteur";            tb_write();
+    }
+    else if (job == "jobSamurai"){
+        st_hp = job_samurai[0]; st_mp = job_samurai[1];
+        st_atk = job_samurai[2]; st_def = job_samurai[3];
+        st_mag = job_samurai[4]; st_res = job_samurai[5];
+        st_spd = job_samurai[6];
+        jobSelect = "Samurai";            tb_write();
+    }
+    else if (job == "jobSentinel"){
+        st_hp = job_sentinel[0]; st_mp = job_sentinel[1];
+        st_atk = job_sentinel[2]; st_def = job_sentinel[3];
+        st_mag = job_sentinel[4]; st_res = job_sentinel[5];
+        st_spd = job_sentinel[6];
+        jobSelect = "Sentinel";            tb_write();
+    }
+    else if (job == "jobPhantomRogue"){
+        st_hp = job_phantomRogue[0]; st_mp = job_phantomRogue[1];
+        st_atk = job_phantomRogue[2]; st_def = job_phantomRogue[3];
+        st_mag = job_phantomRogue[4]; st_res = job_phantomRogue[5];
+        st_spd = job_phantomRogue[6];
+        jobSelect = "Phantom Rogue";            tb_write();
+    }
+    else if (job == "jobSharpshooter"){
+        st_hp = job_sharpshooter[0]; st_mp = job_sharpshooter[1];
+        st_atk = job_sharpshooter[2]; st_def = job_sharpshooter[3];
+        st_mag = job_sharpshooter[4]; st_res = job_sharpshooter[5];
+        st_spd = job_sharpshooter[6];
+        jobSelect = "Sharpshooter";            tb_write();
+    }
+    else if (job == "jobSniper"){
+        st_hp = job_sniper[0]; st_mp = job_sniper[1];
+        st_atk = job_sniper[2]; st_def = job_sniper[3];
+        st_mag = job_sniper[4]; st_res = job_sniper[5];
+        st_spd = job_sniper[6];
+        jobSelect = "Sniper";            tb_write();
+    }
+    else if (job == "jobSpiritLancer"){
+        st_hp = job_spiritLancer[0]; st_mp = job_spiritLancer[1];
+        st_atk = job_spiritLancer[2]; st_def = job_spiritLancer[3];
+        st_mag = job_spiritLancer[4]; st_res = job_spiritLancer[5];
+        st_spd = job_spiritLancer[6];
+        jobSelect = "Spirit Lancer";            tb_write();
+    }
+    else if (job == "jobTemporalKnight"){
+        st_hp = job_temporalKnight[0]; st_mp = job_temporalKnight[1];
+        st_atk = job_temporalKnight[2]; st_def = job_temporalKnight[3];
+        st_mag = job_temporalKnight[4]; st_res = job_temporalKnight[5];
+        st_spd = job_temporalKnight[6];
+        jobSelect = "Temporal Knight";            tb_write();
+    }
+    else if (job == "jobArchMage"){
+        st_hp = job_archMage[0]; st_mp = job_archMage[1];
+        st_atk = job_archMage[2]; st_def = job_archMage[3];
+        st_mag = job_archMage[4]; st_res = job_archMage[5];
+        st_spd = job_archMage[6];
+        jobSelect = "ArchMage";            tb_write();
+    }
+    else if (job == "jobChaosMage"){
+        st_hp = job_chaosMage[0]; st_mp = job_chaosMage[1];
+        st_atk = job_chaosMage[2]; st_def = job_chaosMage[3];
+        st_mag = job_chaosMage[4]; st_res = job_chaosMage[5];
+        st_spd = job_chaosMage[6];
+        jobSelect = "Chaos Mage";            tb_write();
+    }
+    else if (job == "jobElementalist"){
+        st_hp = job_elementalist[0]; st_mp = job_elementalist[1];
+        st_atk = job_elementalist[2]; st_def = job_elementalist[3];
+        st_mag = job_elementalist[4]; st_res = job_elementalist[5];
+        st_spd = job_elementalist[6];
+        jobSelect = "Elementalist";            tb_write();
+    }
+    else if (job == "jobEnchanter"){
+        st_hp = job_enchanter[0]; st_mp = job_enchanter[1];
+        st_atk = job_enchanter[2]; st_def = job_enchanter[3];
+        st_mag = job_enchanter[4]; st_res = job_enchanter[5];
+        st_spd = job_enchanter[6];
+        jobSelect = "Enchanter";            tb_write();
+    }
+    else if (job == "jobEonMage"){
+        st_hp = job_eonMage[0]; st_mp = job_eonMage[1];
+        st_atk = job_eonMage[2]; st_def = job_eonMage[3];
+        st_mag = job_eonMage[4]; st_res = job_eonMage[5];
+        st_spd = job_eonMage[6];
+        jobSelect = "Eon Mage";            tb_write();
+    }
+    else if (job == "jobFrostmancer"){
+        st_hp = job_frostmancer[0]; st_mp = job_frostmancer[1];
+        st_atk = job_frostmancer[2]; st_def = job_frostmancer[3];
+        st_mag = job_frostmancer[4]; st_res = job_frostmancer[5];
+        st_spd = job_frostmancer[6];
+        jobSelect = "Frostmancer";            tb_write();
+    }
+    else if (job == "jobGunMage"){
+        st_hp = job_gunMage[0]; st_mp = job_gunMage[1];
+        st_atk = job_gunMage[2]; st_def = job_gunMage[3];
+        st_mag = job_gunMage[4]; st_res = job_gunMage[5];
+        st_spd = job_gunMage[6];
+        jobSelect = "Gun Mage";            tb_write();
+    }
+    else if (job == "jobIllusionist"){
+        st_hp = job_illusionist[0]; st_mp = job_illusionist[1];
+        st_atk = job_illusionist[2]; st_def = job_illusionist[3];
+        st_mag = job_illusionist[4]; st_res = job_illusionist[5];
+        st_spd = job_illusionist[6];
+        jobSelect = "Illusionist";            tb_write();
+    }
+    else if (job == "jobNecromancer"){
+        st_hp = job_necromancer[0]; st_mp = job_necromancer[1];
+        st_atk = job_necromancer[2]; st_def = job_necromancer[3];
+        st_mag = job_necromancer[4]; st_res = job_necromancer[5];
+        st_spd = job_necromancer[6];
+        jobSelect = "Necromancer";            tb_write();
+    }
+    else if (job == "jobOracle"){
+        st_hp = job_oracle[0]; st_mp = job_oracle[1];
+        st_atk = job_oracle[2]; st_def = job_oracle[3];
+        st_mag = job_oracle[4]; st_res = job_oracle[5];
+        st_spd = job_oracle[6];
+        jobSelect = "Oracle";            tb_write();
+    }
+    else if (job == "jobPriest"){
+        st_hp = job_priest[0]; st_mp = job_priest[1];
+        st_atk = job_priest[2]; st_def = job_priest[3];
+        st_mag = job_priest[4]; st_res = job_priest[5];
+        st_spd = job_priest[6];
+        jobSelect = "Priest";            tb_write();
+    }
+    else if (job == "jobSeer"){
+        st_hp = job_seer[0]; st_mp = job_seer[1];
+        st_atk = job_seer[2]; st_def = job_seer[3];
+        st_mag = job_seer[4]; st_res = job_seer[5];
+        st_spd = job_seer[6];
+        jobSelect = "Seer";            tb_write();
+    }
+    else if (job == "jobStormDruid"){
+        st_hp = job_stormDruid[0]; st_mp = job_stormDruid[1];
+        st_atk = job_stormDruid[2]; st_def = job_stormDruid[3];
+        st_mag = job_stormDruid[4]; st_res = job_stormDruid[5];
+        st_spd = job_stormDruid[6];
+        jobSelect = "Storm Druid";            tb_write();
+    }
+    else if (job == "jobSorceror"){
+        st_hp = job_sorceror[0]; st_mp = job_sorceror[1];
+        st_atk = job_sorceror[2]; st_def = job_sorceror[3];
+        st_mag = job_sorceror[4]; st_res = job_sorceror[5];
+        st_spd = job_sorceror[6];
+        jobSelect = "Sorceror";            tb_write();
+    }
+    else if (job == "jobStarBlaster"){
+        st_hp = job_starBlaster[0]; st_mp = job_starBlaster[1];
+        st_atk = job_starBlaster[2]; st_def = job_starBlaster[3];
+        st_mag = job_starBlaster[4]; st_res = job_starBlaster[5];
+        st_spd = job_starBlaster[6];
+        jobSelect = "Star Blaster";            tb_write();
+    }
+    else if (job == "jobSummoner"){
+        st_hp = job_summoner[0]; st_mp = job_summoner[1];
+        st_atk = job_summoner[2]; st_def = job_summoner[3];
+        st_mag = job_summoner[4]; st_res = job_summoner[5];
+        st_spd = job_summoner[6];
+        jobSelect = "Summoner";            tb_write();
+    }
+    else if (job == "jobWitchDoctor"){
+        st_hp = job_witchDoctor[0]; st_mp = job_witchDoctor[1];
+        st_atk = job_witchDoctor[2]; st_def = job_witchDoctor[3];
+        st_mag = job_witchDoctor[4]; st_res = job_witchDoctor[5];
+        st_spd = job_witchDoctor[6];
+        jobSelect = "WitchDoctor";            tb_write();
+    }
     function tb_write(){
         jobDisplay.innerHTML = jobSelect;
         lvDisplay.innerHTML = "Lv. " + levelCount;
@@ -598,15 +518,9 @@ var tot_hp = 0;    var tot_mp = 0;    var tot_atk = 0;    var tot_def = 0;
 var tot_mag = 0;    var tot_res = 0;    var tot_spd = 0;
 var logsToggle = false;    var totalToggle = false;    var actualToggle = false;
 var logLineCheck = 0;    var gainWhat = "Bonus";
-function logsXD(){
-    logsToggle = !logsToggle;    console.log ("\ LOGS: " + logsToggle);
-}
-function logTotalXD(){
-    totalToggle = !totalToggle;    console.log ("\ TOTAL: " + totalToggle);
-}
-function logActualXD(){
-    actualToggle = !actualToggle;    console.log ("\ ACTUAL STATS: " + actualToggle);
-}
+function logsXD(){    logsToggle = !logsToggle;    console.log ("\\ LOGS: " + logsToggle);    }
+function logTotalXD(){    totalToggle = !totalToggle;    console.log ("\\ TOTAL: " + totalToggle);    }
+function logActualXD(){    actualToggle = !actualToggle;    console.log ("\\ ACTUAL STATS: " + actualToggle);    }
 function writeBonusLogs(){
     if (totalToggle == true){
         log_hp += tot_hp;    log_mp += tot_mp;
@@ -1310,24 +1224,24 @@ function levelUp(){
         }
         else if (rowSelect == 6){        maxStatGain();    }
     }
-    else if (job == "jobElemantalist"){
-        st_hp += rawGain_elemantalist[0];        st_mp += rawGain_elemantalist[1];        st_atk += rawGain_elemantalist[2];        st_def += rawGain_elemantalist[3];
-        st_mag += rawGain_elemantalist[4];        st_res += rawGain_elemantalist[5];        st_spd += rawGain_elemantalist[6];        bonusAmt = bonusAmt_elemantalist;
+    else if (job == "jobElementalist"){
+        st_hp += rawGain_elementalist[0];        st_mp += rawGain_elementalist[1];        st_atk += rawGain_elementalist[2];        st_def += rawGain_elementalist[3];
+        st_mag += rawGain_elementalist[4];        st_res += rawGain_elementalist[5];        st_spd += rawGain_elementalist[6];        bonusAmt = bonusAmt_elementalist;
         if (rowSelect <= 5){
             for (var a=0; a < bonusAmt; a++){
-                if (bonusRoll < bCh_elemantalist[0]){                st_hp += hpBonGain; log_hp++;            }
-                else if (bonusRoll < bCh_elemantalist[1]){                st_mp += mpBonGain; log_mp++;            }
-                else if (bonusRoll < bCh_elemantalist[2]){                st_atk++; log_atk++;            }
-                else if (bonusRoll < bCh_elemantalist[3]){                st_def++; log_def++;            }
-                else if (bonusRoll < bCh_elemantalist[4]){                st_mag++; log_mag++;            }
-                else if (bonusRoll < bCh_elemantalist[5]){                st_res++; log_res++;            }
-                else if (bonusRoll <= bCh_elemantalist[6]){                st_spd++; log_spd++;            }
+                if (bonusRoll < bCh_elementalist[0]){                st_hp += hpBonGain; log_hp++;            }
+                else if (bonusRoll < bCh_elementalist[1]){                st_mp += mpBonGain; log_mp++;            }
+                else if (bonusRoll < bCh_elementalist[2]){                st_atk++; log_atk++;            }
+                else if (bonusRoll < bCh_elementalist[3]){                st_def++; log_def++;            }
+                else if (bonusRoll < bCh_elementalist[4]){                st_mag++; log_mag++;            }
+                else if (bonusRoll < bCh_elementalist[5]){                st_res++; log_res++;            }
+                else if (bonusRoll <= bCh_elementalist[6]){                st_spd++; log_spd++;            }
                 logLineCheck++;
                 if (logsToggle == true && logLineCheck == bonusAmt){
                     log_hp *= hpBonGain; log_mp *= mpBonGain;
                     if (totalToggle == true){
-                        tot_hp = rawGain_elemantalist[0];        tot_mp = rawGain_elemantalist[1];        tot_atk = rawGain_elemantalist[2];        tot_def = rawGain_elemantalist[3];
-                        tot_mag = rawGain_elemantalist[4];        tot_res = rawGain_elemantalist[5];        tot_spd = rawGain_elemantalist[6];
+                        tot_hp = rawGain_elementalist[0];        tot_mp = rawGain_elementalist[1];        tot_atk = rawGain_elementalist[2];        tot_def = rawGain_elementalist[3];
+                        tot_mag = rawGain_elementalist[4];        tot_res = rawGain_elementalist[5];        tot_spd = rawGain_elementalist[6];
                     }
                     writeBonusLogs();
                 }
@@ -1816,9 +1730,7 @@ function levelUpMult(){
     for (var b=0; b<levelAmt; b++){
         levelUp();
     }
-    if (logsToggle == true){
-        console.log("~~~~~~~~~~~~~~~~~~~~~~~")
-    }
+    if (logsToggle == true){        console.log("~~~~~~~~~~~~~~~~~~~~~~~");    }
     resetValues();
 }
 function levelUp10(){
@@ -1837,10 +1749,8 @@ function levelUp200(){
     levelAmt = 199;
     levelUpMult();
 }
-var hpCock = 0;    var mpCock = 0;
-var atkCock = 0;    var defCock = 0;
-var magCock = 0;    var resCock = 0;
-var spdCock = 0;    var levelAmt = 1;
+var hpCock = 0;    var mpCock = 0;    var atkCock = 0;    var defCock = 0;
+var magCock = 0;    var resCock = 0;    var spdCock = 0;    var levelAmt = 1;
 function calcAvg(){ //roll stats, add stat to total sum (cock)
     hpCock = hpCock += st_hp;    mpCock = mpCock += st_mp;
     atkCock = atkCock += st_atk;    defCock = defCock += st_def;
